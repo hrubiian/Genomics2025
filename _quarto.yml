@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs      # <- important for GitHub Pages
+
+website:
+  title: "Structural and Functional Genomics"
+  navbar:
+    logo: iht-logo-100.png
+    left:
+      - href: index.qmd
+        text: Home
+      - href: syllabus.qmd
+        text: Syllabus
+      - href: resources.qmd
+        text: Resources
+      - href: lectures/
+        text: Lectures
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+
