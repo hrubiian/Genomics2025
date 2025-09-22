@@ -1,0 +1,65 @@
+---
+title: "Syllabus"
+---
+
+## Week 1 (23.09.2025)
+
+-   Intro to practical course. Strategy of analysis
+
+<!-- -->
+
+-   **HW:** install [WSL](qmd/Install_Software.qmd), learning basic [shell](qmd/Linux_introduction.qmd) commands, make [HW1_shell_commands](qmd/HW1_Linux_basics.qmd) task
+
+-    Presentation - [Google Slides](https://docs.google.com/presentation/d/1PRIB2bWGBoKb1OlVK-6dyEmj8xGSuaCg4YV7x72MTeA/edit?slide=id.p#slide=id.p)
+
+## Week 2 (30.09.2025)
+
+-   Sanger Sequencing. Design of primers for Sanger Sequencing. SnapGene.
+
+-   HW: Designing primers for sequencing and visualization in SnapGene
+
+-   Presentation - Google Slides
+
+## Week 3(07.10.2025)
+
+-   NGS analysis part 1. Library preparation, sample quality assessment, QC of reads(fastQC/multiQC)
+
+-   HW:
+
+-   Presentation:
+
+## Week 4(14.10.2025)
+-  NGS analysis part 2. Mapping reads to reference genome. SAM/BAM files. De novo assembly.
+- HW:
+- Presentation:
+
+## Week 5(21.10.2025)
+-  NGS analysis part 3. Variant calling. VCF files. Annotation of variants
+- HW:
+- Presentation:
+## Week 6(28.10.2025)
+- Types of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants
+- HW:
+- Presentation:
+## Week 7(04.11.2025)
+- Analysis of annotated VCF files.VEP.Fst.Tadjima's D.
+- HW:
+- Presentation:
+## Week 8(11.11.2025)
+- Oxford Nanopore sequencing. Long reads. Applications.
+- HW:
+- Presentation:
+## Week 9(18.11.2025)
+- R in genomics
+- HW:
+- Presentation:
+## Week 10(25.11.2025)
+ - Guest Lecture
+ 
+## Week 11(02.12.2025)
+- TBA
+
+## Week 12(09.12.2025)
+- Presentation group's results. Summary of the course
+
+

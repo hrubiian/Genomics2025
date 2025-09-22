@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Nazarii Hrubiian">
 
-<title>Genomics2025 – Structural and Functional Genomics</title>
+<title>0. Installing Software – Structural and Functional Genomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +21,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-9fc9979f13c68dab769c953c4c7d8074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9fc9979f13c68dab769c953c4c7d8074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -78,10 +114,10 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./iht-logo-100.png" alt="" class="navbar-logo">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../iht-logo-100.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Structural and Functional Genomics</span>
     </a>
   </div>
@@ -92,16 +128,12 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./syllabus.html"> 
+    <a class="nav-link" href="../syllabus.html"> 
 <span class="menu-text">Syllabus</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./resources.html"> 
-<span class="menu-text">Resources</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -114,21 +146,40 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#вступ" id="toc-вступ" class="nav-link active" data-scroll-target="#вступ">Вступ</a></li>
+  <li><a href="#попередні-вимоги" id="toc-попередні-вимоги" class="nav-link" data-scroll-target="#попередні-вимоги">Попередні вимоги</a></li>
+  <li><a href="#крок-1-увімкнути-wsl" id="toc-крок-1-увімкнути-wsl" class="nav-link" data-scroll-target="#крок-1-увімкнути-wsl">Крок 1: Увімкнути WSL</a></li>
+  <li><a href="#крок-2-перезавантажте-компютер" id="toc-крок-2-перезавантажте-компютер" class="nav-link" data-scroll-target="#крок-2-перезавантажте-компютер">Крок 2: Перезавантажте комп’ютер</a></li>
+  <li><a href="#крок-3-запустіть-ubuntu" id="toc-крок-3-запустіть-ubuntu" class="nav-link" data-scroll-target="#крок-3-запустіть-ubuntu">Крок 3: Запустіть Ubuntu</a></li>
+  <li><a href="#крок-4-оновіть-ubuntu" id="toc-крок-4-оновіть-ubuntu" class="nav-link" data-scroll-target="#крок-4-оновіть-ubuntu">Крок 4: Оновіть Ubuntu</a></li>
+  <li><a href="#встановлення-miniconda" id="toc-встановлення-miniconda" class="nav-link" data-scroll-target="#встановлення-miniconda">Встановлення Miniconda</a></li>
+  <li><a href="#встановлення-miniconda-на-macos" id="toc-встановлення-miniconda-на-macos" class="nav-link" data-scroll-target="#встановлення-miniconda-на-macos">Встановлення Miniconda на MacOS</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Genomics2025</h1>
+<h1 class="title">0. Installing Software</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nazarii Hrubiian </p>
+          </div>
+  </div>
     
   
     
@@ -139,13 +190,62 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the <strong>Structural and Functional Genomics</strong> Fall 2025 practice course! Browse categories for finding required information:</p>
+<section id="вступ" class="level1">
+<h1>Вступ</h1>
+<p>Windows Subsystem for Linux (WSL) дозволяє вам запускати дистрибутив Linux поруч із вашою операційною системою Windows. Цей документ надає покрокові інструкції для встановлення Ubuntu на WSL.</p>
+</section>
+<section id="попередні-вимоги" class="level1">
+<h1>Попередні вимоги</h1>
 <ul>
-<li><p><a href="./syllabus.html">Syllabus</a></p></li>
-<li><p><a href="./resources.html">Resources</a></p></li>
+<li>Windows 10 версії 1903 або новішої, або Windows 11</li>
+<li>Адміністративні права на вашій машині</li>
 </ul>
+</section>
+<section id="крок-1-увімкнути-wsl" class="level1">
+<h1>Крок 1: Увімкнути WSL</h1>
+<ol type="1">
+<li><p>Відкрийте <strong>PowerShell</strong> від імені адміністратора.</p>
+<p>Шукайте “PowerShell” в меню «Пуск», клацніть правою кнопкою миші та виберіть “Запустити від імені адміністратора”.</p></li>
+<li><p>Виконайте наступну команду для увімкнення WSL:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell code-with-copy"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>wsl <span class="op">--</span>install</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ця команда завантажить останню версію WSL і встановить всі необхідні компоненти.</p></li>
+</ol>
+</section>
+<section id="крок-2-перезавантажте-компютер" class="level1">
+<h1>Крок 2: Перезавантажте комп’ютер</h1>
+<p>Після виконання команди вам потрібно буде перезавантажити комп’ютер, щоб зміни вступили в силу.</p>
+</section>
+<section id="крок-3-запустіть-ubuntu" class="level1">
+<h1>Крок 3: Запустіть Ubuntu</h1>
+<p>Після встановлення ви можете запустити Ubuntu з меню «Пуск» або набравши ubuntu у PowerShell або командному рядку.</p>
+<p>Під час першого запуску Ubuntu потрібно буде кілька хвилин для налаштування. Вам буде запропоновано створити обліковий запис користувача та пароль.</p>
+</section>
+<section id="крок-4-оновіть-ubuntu" class="level1">
+<h1>Крок 4: Оновіть Ubuntu</h1>
+<p>Після встановлення Ubuntu корисно оновити списки пакетів, щоб переконатися, що у вас є останнє програмне забезпечення.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt upgrade</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ви успішно встановили <strong>Ubuntu</strong> на Windows Subsystem for Linux (WSL)! Тепер ви можете використовувати <strong>Ubuntu</strong> разом із вашими Windows-додатками.</p>
+<p>Щоб дізнатися більше про розширені налаштування, розгляньте можливість ознайомлення з документацією WSL на вебсайті <a href="https://learn.microsoft.com/en-us/windows/wsl/install">Microsoft</a>.</p>
+</section>
+<section id="встановлення-miniconda" class="level1">
+<h1>Встановлення Miniconda</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">#створення папки miniconda3</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Завантаження останньої версії дистрибутиву</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh <span class="at">-O</span> ~/miniconda3/miniconda.sh</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Інсталяція дистрибутиву</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/miniconda3/miniconda.sh <span class="at">-b</span> <span class="at">-u</span> <span class="at">-p</span> ~/miniconda3</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Видалення інсталятора</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> ~/miniconda3/miniconda.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Детальніше на <a href="https://docs.anaconda.com/miniconda/">сайті</a></p>
+</section>
+<section id="встановлення-miniconda-на-macos" class="level1">
+<h1>Встановлення Miniconda на MacOS</h1>
+<p>Інсталяцію дистрибутиву можна знайти на сайті розробників <a href="https://conda.io/projects/conda/en/latest/user-guide/install/macos.html">conda.io</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

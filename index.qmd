@@ -2,10 +2,8 @@
 title: "Genomics2025"
 ---
 
-This is a Quarto website.
+Welcome to the **Structural and Functional Genomics** Fall 2025 practice course! Browse categories for finding required information:
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+-   [Syllabus](syllabus.qmd)
 
-```{r}
-1 + 1
-```
+-   [Resources](resources.qmd)

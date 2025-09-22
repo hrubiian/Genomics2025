@@ -18,6 +18,321 @@
     "href": "index.html",
     "title": "Genomics2025",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Welcome to the Structural and Functional Genomics Fall 2025 practice course! Browse categories for finding required information:\n\nSyllabus\nResources"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html",
+    "href": "qmd/Linux_introduction.html",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Change Directory) Зміна директорії\ncd /path/to/directory  # Перехід до конкретного каталогу\ncd ~                   # Перехід до домашнього каталогу\ncd ..                  # Повернення до попередньої директорії\n\n\n\n(List Directory) Відображення вмісту каталогу\nls                      # Перелік файлів у поточному каталозі\nls -l                   # Виведення зі списком та атрибутами файлів\nls -a                   # Відображення прихованих файлів\nls -lh                  # Відображення списку із розмірами файлів\nls -R                   # Рекурсивний список всіх файлів у підкаталогах\nls -la                  # Виведення прихованих файлів з детальним описом\n\n\n\n(Disk Free) Команда для зміни поточного робочого каталогу\ndf                      # Виведення використання диску для всіх файлових систем\ndf -h                   # Використання диску в доступній формі (GB, MB)\ndf -T                   # Показує тип файлової системи\ndf -i                   # Показує використання індексних дескрипторів (inodes)\n\n\n\n(Move) Переміщення або перейменування файлів і каталогів.\nmv file.txt /new/path/        # Переміщення файлу до нового каталогу\nmv old_name.txt new_name.txt  # Перейменування файлу\nmv *.txt /new/path/           # Переміщення всіх .txt файлів\nmv -i file.txt /new/path/     # Підтвердження перед перезаписом файлів\n\n\n\n(Make Directory) Створення нових каталогів\nmkdir new_directory     # Створення нового каталогу\nmkdir -p /path/to/dir   # Створення структури каталогів (включаючи всі проміжні)\n\n\n\n(Remove) Створення нових каталогів\nrm file.txt             # Видалення файлу\nrm -r directory         # Рекурсивне видалення каталогу з вмістом\nrm -f file.txt          # Примусове видалення файлу без підтвердження\nrm -i file.txt          # Підтвердження перед кожним видаленням\n\n\n\n(Concatenate) Відображення вмісту файлу або об’єднання файлів.\ncat file.txt            # Відображення вмісту файлу\ncat file1.txt file2.txt # Об'єднання кількох файлів у вивід\ncat file.txt &gt; newfile.txt  # Створення нового файлу з копією вмісту\n\n\n\n(Uncompress) Розпаковує стиснені файли у форматі .gz.\ngunzip file.gz          # Розпаковує файл і видаляє оригінал .gz\ngunzip -k file.gz       # Розпаковує файл, залишаючи оригінал\ngunzip *.gz             # Розпаковує всі файли з розширенням .gz\n\n\n\n(Concatenate Compressed Files) Перегляд стисненого файлу без розпаковування.\nzcat file.gz            # Перегляд вмісту стисненого файлу\nzcat file1.gz file2.gz  # Перегляд вмісту кількох стиснених файлів\n\n\n\n(Global Regular Expression Print) Пошук тексту у файлах за шаблоном.\ngrep 'pattern' file.txt         # Пошук рядків, що містять 'pattern' у файлі\ngrep -i 'pattern' file.txt      # Пошук без урахування регістру\ngrep -r 'pattern' /path/to/dir  # Рекурсивний пошук по всьому каталогу\ngrep -v 'pattern' file.txt      # Виведення рядків, що не містять 'pattern'\ngrep --color \"example\" file.txt   # Виділяє \"example\" у виведенні\ngrep --color -w \"example\" file.txt   # Пошук цілого слова з підкресленням знайдених збігів\ngrep --color \\\"PTPN22\\\" file.txt    #Виділення рядків, якщо в них є регулярні вирази у дужках\n\n\n\n(Display a Line of Text) Виведення тексту або змінної в термінал.\necho \"Hello, World!\"    # Виведення тексту\necho $HOME              # Виведення значення змінної\necho \"Line 1\\nLine 2\"   # Виведення з новими рядками\n\n\n\n(Process Status) Виводить інформацію про активні процеси.\nps                      # Показує процеси поточного користувача\nps aux                  # Показує всі процеси у системі\nps -eF                  # Детальна інформація про всі процеси\nps -p 12345             # Інформація про процес за його PID\n\n\n\n(Task Manager) Інтерактивне відображення процесів та їхнього використання ресурсів у реальному часі.\ntop                     # Запуск топ з інформацією про процеси\ntop -u username         # Показує процеси конкретного користувача\n\n\n\n(Output the First Part of Files) Виводить перші рядки файлу.\nhead file.txt           # Перші 10 рядків файлу за замовчуванням\nhead -n 20 file.txt     # Перші 20 рядків файлу\n\n\n\n(Output the Last Part of Files) Виводить останні рядки файлу.\ntail file.txt           # Останні 10 рядків файлу за замовчуванням\ntail -n 20 file.txt     # Останні 20 рядків файлу\ntail -f file.txt        # Виведення нових рядків у реальному часі (відстеження логу)\n\n\n\n(Pipe) Передає виведення однієї команди як вхід для іншої.\nls | grep 'file'        # Пошук файлів у виводі команди ls\nps aux | grep 'process' # Пошук процесу у виводі ps\n\n\n\n(Manual) Виводить документацію для команд.\nman ls                  # Відображає документацію для команди ls\nman -k 'search_term'    # Пошук команд за ключовим словом\n\n\n\n(Update Timestamp or Create Empty File) Створює новий порожній файл або оновлює час модифікації існуючого.\ntouch newfile.txt       # Створення нового файлу\ntouch -a file.txt       # Оновлення часу доступу до файлу\n\n\n\n(Compress) Стискання файлів.\ngzip file.txt           # Стиснення файлу\ngzip -k file.txt        # Стиснення без видалення оригіналу\ngzip *.txt              # Стиснення всіх текстових файлів у каталозі\n\n\n\n(Secure Shell) Безпечне віддалене з’єднання з сервером.\nssh user@hostname       # Підключення до сервера\nssh -i keyfile.pem user@hostname  # Підключення з використанням ключа\n\n\n\n(Compare Two Sorted Files) Створення нових каталогів\ncomm file1.txt file2.txt # Порівняння файлів\ncomm -1 file1.txt file2.txt # Виведення відмінностей у другому файлі\n\n\n\n(Terminate Process) Команда для завершення процесів за їхнім PID.\nkill 12345             # Завершення процесу з PID 12345\nkill -9 12345          # Примусове завершення процесу з PID 12345\n\n\n\n(Change Mode) Зміна прав доступу до файлів і каталогів.\nchmod 755 file.txt     # Встановлення прав доступу (власник: читання, запис, виконання; група і інші: тільки читання і виконання)\nchmod u+x file.txt     # Додавання права виконання для власника\nchmod -R 644 directory # Рекурсивна зміна прав доступу для всіх файлів у каталозі\nchmod a-w file.txt     # Відбір прав запису для всіх\n\n\n\n(Change Owner) Зміна власника файлів і каталогів.\nchown user:group file.txt      # Зміна власника і групи файлу\nchown -R user:group directory  # Рекурсивна зміна власника для каталогу та всіх його файлів\nchown user file.txt            # Зміна лише власника\n\n\n\n(Download Files from the Web) Створення нових каталогів\nwget http://example.com/file.zip      # Завантаження файлу з вказаної URL\nwget -c http://example.com/file.zip   # Продовження завантаження з місця переривання\nwget -r http://example.com/           # Рекурсивне завантаження всього сайту\nwget --limit-rate=200k http://example.com/file.zip  # Обмеження швидкості завантаження\n\n\n\n(Make Directory) Створення нових каталогів\nsudo apt-get update      # Оновлення системи на рівні адміністратора\nsudo systemctl restart apache2  # Перезапуск служби\nsudo su                  # Перехід до суперкористувача (root)\nsudo visudo              # Редагування конфігураційного файлу sudoers\n\n\n\nВідображення структури каталогів і файлів у вигляді дерева\ntree                      # Виводить структуру поточного каталогу у вигляді дерева\ntree /path/to/directory   # Виводить структуру вказаного каталогу\ntree -a                   # Показує всі файли, включаючи приховані\ntree -d                   # Виводить тільки каталоги\ntree -f                   # Виводить повні шляхи до файлів і каталогів\ntree -h                   # Показує розмір файлів у форматі кілобайт/мегабайт\n\n\n\n(Print Working Directory) Створення нових каталогів\npwd                       # Виводить абсолютний шлях до поточного робочого каталогу\npwd -P                    # Показує фізичний шлях, реальний без символічних посилань\n\n\n\n(Word Count) Підрахунок кількості рядків, слів і символів у файлі або виведенні тексту.\nwc file.txt             # Підрахунок кількості рядків, слів і символів у файлі\nwc -l file.txt          # Підрахунок кількості рядків у файлі\nwc -w file.txt          # Підрахунок кількості слів у файлі\nwc -c file.txt          # Підрахунок кількості байтів у файлі\nwc -m file.txt          # Підрахунок кількості символів у файлі (якщо використовується багатобайтове кодування)\nwc -L file.txt          # Виведення довжини найдовшого рядка в символах\nwc -l file1.txt file2.txt    # Підрахунок рядків у кількох файлах\n\n\n\nhistory                    # Виводить список усіх раніше виконаних команд\nhistory 10                 # Виводить останні 10 виконаних команд\n!123                       # Виконує команду з номером 123 з історії\n!!                         # Повторює останню виконану команду\n!grep                      # Виконує останню команду з історії, яка містить \"grep\"\nhistory -c                 # Очищає історію виконаних команд\nhistory -w filename        # Зберігає історію команд у файл filename\nhistory -r filename        # Завантажує історію команд з файлу filename\n\n\n\nтПосторінковий перегляд вмісту файлу або виведення тексту в терміналі. Вона дозволяє переглядати текст поступово, прокручуючи його по сторінках.\nmore file.txt              # Відкриває файл для посторінкового перегляду\ncat file.txt | more        # Виводить вміст файлу за допомогою cat і посторінково з more\nmore -num file.txt         # Виводить файл, показуючи num рядків одночасно\nmore +n file.txt           # Починає показ із рядка n у файлі\nmore *.txt                 # Послідовно переглядає кілька файлів .txt посторінково\ncommand | more             # Показує виведення будь-якої команди посторінково\n\n\n\nКоманда less схожа на more, але з додатковими можливостями для перегляду файлів та виведення команд у терміналі. Вона дозволяє прокручувати текст як вперед, так і назад, і підтримує більше команд для навігації.\nless file.txt              # Відкриває файл для посторінкового перегляду\nless +10 file.txt          # Починає показ із 10-го рядка файлу\nls -l | less               # Виводить результат команди ls -l посторінково\nless file1.txt file2.txt    # Виводить кілька файлів один за одним\nless +F file.txt           # Моніторить файл у реальному часі (схоже на tail -f)\nless -S file.txt           # Виводить файл без переносу довгих рядків\n# Корисні клавіші під час перегляду файлу:\n# Space – наступна сторінка\n# b – попередня сторінка\n# /текст – пошук тексту\n# n – наступний результат пошуку\n# q – вихід з перегляду\n\n\n\nКоманда cut використовується в Unix/Linux для вибору частин рядків з текстових файлів або стандартного введення. Вона може використовуватися для видалення певних колонок, символів або полів з кожного рядка\ncut -f 1,3 file.txt          # Вибір 1-ї та 3-ї колонок з табуляцією як роздільником\ncut -c 1-5 file.txt          # Вибір символів з 1 по 5 з кожного рядка\ncut -d ',' -f 2 file.csv     # Вибір 2-го поля з файлу CSV, де поля розділені комою\ncut -d ':' -f 3 /etc/passwd   # Вибір 3-го поля з файлу /etc/passwd\ncut -c 3- file.txt           # Вибір символів, починаючи з 3-го до кінця рядка\ncut -d ',' -f 1,3 file.csv    # Вибір 1-ї та 3-ї колонок з файлу CSV\ncut -c 1-10 file.txt         # Вибір перших 10 символів з кожного рядка\n\n\n\nawk — це потужна командна утиліта для обробки і аналізу текстових файлів в Unix/Linux системах. Вона дозволяє працювати з рядками та полями (колонками) тексту, обчислювати значення та застосовувати різні дії до кожного рядка.\nawk '{print}' file.txt     # Виводить всі рядки з файлу\nawk '{print $1}' file.txt  # Виводить першу колонку\nawk '$2 &gt; 100 {print $0}' file.txt  # Виводить рядки, де значення у 2-й колонці більше за 100\nawk -F ',' '{print $1, $3}' file.csv  # Виводить 1-шу і 3-тю колонки з файлу CSV\nawk '{sum += $1} END {print sum}' file.txt  # Підсумовує значення з 1-ї колонки\nawk -v threshold=50 '$2 &gt; threshold {print $1, $2}' file.txt  # Виводить рядки, де 2-а колонка більше за 50\nawk '{print $2 - $1}' file.txt  # Виводить різницю між 2-ю і 1-ю колонками\nawk 'NR == 1 {min = $1} $1 &lt; min {min = $1} END {print min}' file.txt  # Мінімальне значення в 1-й колонці\nawk 'NR == 1 {max = $1} $1 &gt; max {max = $1} END {print max}' file.txt  # Максимальне значення в 1-й колонці"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#cd",
+    "href": "qmd/Linux_introduction.html#cd",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Change Directory) Зміна директорії\ncd /path/to/directory  # Перехід до конкретного каталогу\ncd ~                   # Перехід до домашнього каталогу\ncd ..                  # Повернення до попередньої директорії"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#ls",
+    "href": "qmd/Linux_introduction.html#ls",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(List Directory) Відображення вмісту каталогу\nls                      # Перелік файлів у поточному каталозі\nls -l                   # Виведення зі списком та атрибутами файлів\nls -a                   # Відображення прихованих файлів\nls -lh                  # Відображення списку із розмірами файлів\nls -R                   # Рекурсивний список всіх файлів у підкаталогах\nls -la                  # Виведення прихованих файлів з детальним описом"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#df",
+    "href": "qmd/Linux_introduction.html#df",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Disk Free) Команда для зміни поточного робочого каталогу\ndf                      # Виведення використання диску для всіх файлових систем\ndf -h                   # Використання диску в доступній формі (GB, MB)\ndf -T                   # Показує тип файлової системи\ndf -i                   # Показує використання індексних дескрипторів (inodes)"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#mv",
+    "href": "qmd/Linux_introduction.html#mv",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Move) Переміщення або перейменування файлів і каталогів.\nmv file.txt /new/path/        # Переміщення файлу до нового каталогу\nmv old_name.txt new_name.txt  # Перейменування файлу\nmv *.txt /new/path/           # Переміщення всіх .txt файлів\nmv -i file.txt /new/path/     # Підтвердження перед перезаписом файлів"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#mkdir",
+    "href": "qmd/Linux_introduction.html#mkdir",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Make Directory) Створення нових каталогів\nmkdir new_directory     # Створення нового каталогу\nmkdir -p /path/to/dir   # Створення структури каталогів (включаючи всі проміжні)"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#rm",
+    "href": "qmd/Linux_introduction.html#rm",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Remove) Створення нових каталогів\nrm file.txt             # Видалення файлу\nrm -r directory         # Рекурсивне видалення каталогу з вмістом\nrm -f file.txt          # Примусове видалення файлу без підтвердження\nrm -i file.txt          # Підтвердження перед кожним видаленням"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#cat",
+    "href": "qmd/Linux_introduction.html#cat",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Concatenate) Відображення вмісту файлу або об’єднання файлів.\ncat file.txt            # Відображення вмісту файлу\ncat file1.txt file2.txt # Об'єднання кількох файлів у вивід\ncat file.txt &gt; newfile.txt  # Створення нового файлу з копією вмісту"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#gunzip",
+    "href": "qmd/Linux_introduction.html#gunzip",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Uncompress) Розпаковує стиснені файли у форматі .gz.\ngunzip file.gz          # Розпаковує файл і видаляє оригінал .gz\ngunzip -k file.gz       # Розпаковує файл, залишаючи оригінал\ngunzip *.gz             # Розпаковує всі файли з розширенням .gz"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#zcat",
+    "href": "qmd/Linux_introduction.html#zcat",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Concatenate Compressed Files) Перегляд стисненого файлу без розпаковування.\nzcat file.gz            # Перегляд вмісту стисненого файлу\nzcat file1.gz file2.gz  # Перегляд вмісту кількох стиснених файлів"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#grep",
+    "href": "qmd/Linux_introduction.html#grep",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Global Regular Expression Print) Пошук тексту у файлах за шаблоном.\ngrep 'pattern' file.txt         # Пошук рядків, що містять 'pattern' у файлі\ngrep -i 'pattern' file.txt      # Пошук без урахування регістру\ngrep -r 'pattern' /path/to/dir  # Рекурсивний пошук по всьому каталогу\ngrep -v 'pattern' file.txt      # Виведення рядків, що не містять 'pattern'\ngrep --color \"example\" file.txt   # Виділяє \"example\" у виведенні\ngrep --color -w \"example\" file.txt   # Пошук цілого слова з підкресленням знайдених збігів\ngrep --color \\\"PTPN22\\\" file.txt    #Виділення рядків, якщо в них є регулярні вирази у дужках"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#echo",
+    "href": "qmd/Linux_introduction.html#echo",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Display a Line of Text) Виведення тексту або змінної в термінал.\necho \"Hello, World!\"    # Виведення тексту\necho $HOME              # Виведення значення змінної\necho \"Line 1\\nLine 2\"   # Виведення з новими рядками"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#ps",
+    "href": "qmd/Linux_introduction.html#ps",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Process Status) Виводить інформацію про активні процеси.\nps                      # Показує процеси поточного користувача\nps aux                  # Показує всі процеси у системі\nps -eF                  # Детальна інформація про всі процеси\nps -p 12345             # Інформація про процес за його PID"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#top",
+    "href": "qmd/Linux_introduction.html#top",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Task Manager) Інтерактивне відображення процесів та їхнього використання ресурсів у реальному часі.\ntop                     # Запуск топ з інформацією про процеси\ntop -u username         # Показує процеси конкретного користувача"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#head",
+    "href": "qmd/Linux_introduction.html#head",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Output the First Part of Files) Виводить перші рядки файлу.\nhead file.txt           # Перші 10 рядків файлу за замовчуванням\nhead -n 20 file.txt     # Перші 20 рядків файлу"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#tail",
+    "href": "qmd/Linux_introduction.html#tail",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Output the Last Part of Files) Виводить останні рядки файлу.\ntail file.txt           # Останні 10 рядків файлу за замовчуванням\ntail -n 20 file.txt     # Останні 20 рядків файлу\ntail -f file.txt        # Виведення нових рядків у реальному часі (відстеження логу)"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#section",
+    "href": "qmd/Linux_introduction.html#section",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Pipe) Передає виведення однієї команди як вхід для іншої.\nls | grep 'file'        # Пошук файлів у виводі команди ls\nps aux | grep 'process' # Пошук процесу у виводі ps"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#man",
+    "href": "qmd/Linux_introduction.html#man",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Manual) Виводить документацію для команд.\nman ls                  # Відображає документацію для команди ls\nman -k 'search_term'    # Пошук команд за ключовим словом"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#touch",
+    "href": "qmd/Linux_introduction.html#touch",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Update Timestamp or Create Empty File) Створює новий порожній файл або оновлює час модифікації існуючого.\ntouch newfile.txt       # Створення нового файлу\ntouch -a file.txt       # Оновлення часу доступу до файлу"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#gzip",
+    "href": "qmd/Linux_introduction.html#gzip",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Compress) Стискання файлів.\ngzip file.txt           # Стиснення файлу\ngzip -k file.txt        # Стиснення без видалення оригіналу\ngzip *.txt              # Стиснення всіх текстових файлів у каталозі"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#ssh",
+    "href": "qmd/Linux_introduction.html#ssh",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Secure Shell) Безпечне віддалене з’єднання з сервером.\nssh user@hostname       # Підключення до сервера\nssh -i keyfile.pem user@hostname  # Підключення з використанням ключа"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#comm",
+    "href": "qmd/Linux_introduction.html#comm",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Compare Two Sorted Files) Створення нових каталогів\ncomm file1.txt file2.txt # Порівняння файлів\ncomm -1 file1.txt file2.txt # Виведення відмінностей у другому файлі"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#kill",
+    "href": "qmd/Linux_introduction.html#kill",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Terminate Process) Команда для завершення процесів за їхнім PID.\nkill 12345             # Завершення процесу з PID 12345\nkill -9 12345          # Примусове завершення процесу з PID 12345"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#chmod",
+    "href": "qmd/Linux_introduction.html#chmod",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Change Mode) Зміна прав доступу до файлів і каталогів.\nchmod 755 file.txt     # Встановлення прав доступу (власник: читання, запис, виконання; група і інші: тільки читання і виконання)\nchmod u+x file.txt     # Додавання права виконання для власника\nchmod -R 644 directory # Рекурсивна зміна прав доступу для всіх файлів у каталозі\nchmod a-w file.txt     # Відбір прав запису для всіх"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#chown",
+    "href": "qmd/Linux_introduction.html#chown",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Change Owner) Зміна власника файлів і каталогів.\nchown user:group file.txt      # Зміна власника і групи файлу\nchown -R user:group directory  # Рекурсивна зміна власника для каталогу та всіх його файлів\nchown user file.txt            # Зміна лише власника"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#wget",
+    "href": "qmd/Linux_introduction.html#wget",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Download Files from the Web) Створення нових каталогів\nwget http://example.com/file.zip      # Завантаження файлу з вказаної URL\nwget -c http://example.com/file.zip   # Продовження завантаження з місця переривання\nwget -r http://example.com/           # Рекурсивне завантаження всього сайту\nwget --limit-rate=200k http://example.com/file.zip  # Обмеження швидкості завантаження"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#sudo",
+    "href": "qmd/Linux_introduction.html#sudo",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Make Directory) Створення нових каталогів\nsudo apt-get update      # Оновлення системи на рівні адміністратора\nsudo systemctl restart apache2  # Перезапуск служби\nsudo su                  # Перехід до суперкористувача (root)\nsudo visudo              # Редагування конфігураційного файлу sudoers"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#tree",
+    "href": "qmd/Linux_introduction.html#tree",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "Відображення структури каталогів і файлів у вигляді дерева\ntree                      # Виводить структуру поточного каталогу у вигляді дерева\ntree /path/to/directory   # Виводить структуру вказаного каталогу\ntree -a                   # Показує всі файли, включаючи приховані\ntree -d                   # Виводить тільки каталоги\ntree -f                   # Виводить повні шляхи до файлів і каталогів\ntree -h                   # Показує розмір файлів у форматі кілобайт/мегабайт"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#pwd",
+    "href": "qmd/Linux_introduction.html#pwd",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Print Working Directory) Створення нових каталогів\npwd                       # Виводить абсолютний шлях до поточного робочого каталогу\npwd -P                    # Показує фізичний шлях, реальний без символічних посилань"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#wc",
+    "href": "qmd/Linux_introduction.html#wc",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "(Word Count) Підрахунок кількості рядків, слів і символів у файлі або виведенні тексту.\nwc file.txt             # Підрахунок кількості рядків, слів і символів у файлі\nwc -l file.txt          # Підрахунок кількості рядків у файлі\nwc -w file.txt          # Підрахунок кількості слів у файлі\nwc -c file.txt          # Підрахунок кількості байтів у файлі\nwc -m file.txt          # Підрахунок кількості символів у файлі (якщо використовується багатобайтове кодування)\nwc -L file.txt          # Виведення довжини найдовшого рядка в символах\nwc -l file1.txt file2.txt    # Підрахунок рядків у кількох файлах"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#history",
+    "href": "qmd/Linux_introduction.html#history",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "history                    # Виводить список усіх раніше виконаних команд\nhistory 10                 # Виводить останні 10 виконаних команд\n!123                       # Виконує команду з номером 123 з історії\n!!                         # Повторює останню виконану команду\n!grep                      # Виконує останню команду з історії, яка містить \"grep\"\nhistory -c                 # Очищає історію виконаних команд\nhistory -w filename        # Зберігає історію команд у файл filename\nhistory -r filename        # Завантажує історію команд з файлу filename"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#more",
+    "href": "qmd/Linux_introduction.html#more",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "тПосторінковий перегляд вмісту файлу або виведення тексту в терміналі. Вона дозволяє переглядати текст поступово, прокручуючи його по сторінках.\nmore file.txt              # Відкриває файл для посторінкового перегляду\ncat file.txt | more        # Виводить вміст файлу за допомогою cat і посторінково з more\nmore -num file.txt         # Виводить файл, показуючи num рядків одночасно\nmore +n file.txt           # Починає показ із рядка n у файлі\nmore *.txt                 # Послідовно переглядає кілька файлів .txt посторінково\ncommand | more             # Показує виведення будь-якої команди посторінково"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#less",
+    "href": "qmd/Linux_introduction.html#less",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "Команда less схожа на more, але з додатковими можливостями для перегляду файлів та виведення команд у терміналі. Вона дозволяє прокручувати текст як вперед, так і назад, і підтримує більше команд для навігації.\nless file.txt              # Відкриває файл для посторінкового перегляду\nless +10 file.txt          # Починає показ із 10-го рядка файлу\nls -l | less               # Виводить результат команди ls -l посторінково\nless file1.txt file2.txt    # Виводить кілька файлів один за одним\nless +F file.txt           # Моніторить файл у реальному часі (схоже на tail -f)\nless -S file.txt           # Виводить файл без переносу довгих рядків\n# Корисні клавіші під час перегляду файлу:\n# Space – наступна сторінка\n# b – попередня сторінка\n# /текст – пошук тексту\n# n – наступний результат пошуку\n# q – вихід з перегляду"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#cut",
+    "href": "qmd/Linux_introduction.html#cut",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "Команда cut використовується в Unix/Linux для вибору частин рядків з текстових файлів або стандартного введення. Вона може використовуватися для видалення певних колонок, символів або полів з кожного рядка\ncut -f 1,3 file.txt          # Вибір 1-ї та 3-ї колонок з табуляцією як роздільником\ncut -c 1-5 file.txt          # Вибір символів з 1 по 5 з кожного рядка\ncut -d ',' -f 2 file.csv     # Вибір 2-го поля з файлу CSV, де поля розділені комою\ncut -d ':' -f 3 /etc/passwd   # Вибір 3-го поля з файлу /etc/passwd\ncut -c 3- file.txt           # Вибір символів, починаючи з 3-го до кінця рядка\ncut -d ',' -f 1,3 file.csv    # Вибір 1-ї та 3-ї колонок з файлу CSV\ncut -c 1-10 file.txt         # Вибір перших 10 символів з кожного рядка"
+  },
+  {
+    "objectID": "qmd/Linux_introduction.html#awk",
+    "href": "qmd/Linux_introduction.html#awk",
+    "title": "1. Основні команди Linux",
+    "section": "",
+    "text": "awk — це потужна командна утиліта для обробки і аналізу текстових файлів в Unix/Linux системах. Вона дозволяє працювати з рядками та полями (колонками) тексту, обчислювати значення та застосовувати різні дії до кожного рядка.\nawk '{print}' file.txt     # Виводить всі рядки з файлу\nawk '{print $1}' file.txt  # Виводить першу колонку\nawk '$2 &gt; 100 {print $0}' file.txt  # Виводить рядки, де значення у 2-й колонці більше за 100\nawk -F ',' '{print $1, $3}' file.csv  # Виводить 1-шу і 3-тю колонки з файлу CSV\nawk '{sum += $1} END {print sum}' file.txt  # Підсумовує значення з 1-ї колонки\nawk -v threshold=50 '$2 &gt; threshold {print $1, $2}' file.txt  # Виводить рядки, де 2-а колонка більше за 50\nawk '{print $2 - $1}' file.txt  # Виводить різницю між 2-ю і 1-ю колонками\nawk 'NR == 1 {min = $1} $1 &lt; min {min = $1} END {print min}' file.txt  # Мінімальне значення в 1-й колонці\nawk 'NR == 1 {max = $1} $1 &gt; max {max = $1} END {print max}' file.txt  # Максимальне значення в 1-й колонці"
+  },
+  {
+    "objectID": "qmd/Install_Software.html",
+    "href": "qmd/Install_Software.html",
+    "title": "0. Installing Software",
+    "section": "",
+    "text": "Вступ\nWindows Subsystem for Linux (WSL) дозволяє вам запускати дистрибутив Linux поруч із вашою операційною системою Windows. Цей документ надає покрокові інструкції для встановлення Ubuntu на WSL.\n\n\nПопередні вимоги\n\nWindows 10 версії 1903 або новішої, або Windows 11\nАдміністративні права на вашій машині\n\n\n\nКрок 1: Увімкнути WSL\n\nВідкрийте PowerShell від імені адміністратора.\nШукайте “PowerShell” в меню «Пуск», клацніть правою кнопкою миші та виберіть “Запустити від імені адміністратора”.\nВиконайте наступну команду для увімкнення WSL:\nwsl --install\nЦя команда завантажить останню версію WSL і встановить всі необхідні компоненти.\n\n\n\nКрок 2: Перезавантажте комп’ютер\nПісля виконання команди вам потрібно буде перезавантажити комп’ютер, щоб зміни вступили в силу.\n\n\nКрок 3: Запустіть Ubuntu\nПісля встановлення ви можете запустити Ubuntu з меню «Пуск» або набравши ubuntu у PowerShell або командному рядку.\nПід час першого запуску Ubuntu потрібно буде кілька хвилин для налаштування. Вам буде запропоновано створити обліковий запис користувача та пароль.\n\n\nКрок 4: Оновіть Ubuntu\nПісля встановлення Ubuntu корисно оновити списки пакетів, щоб переконатися, що у вас є останнє програмне забезпечення.\nsudo apt update\nsudo apt upgrade\nВи успішно встановили Ubuntu на Windows Subsystem for Linux (WSL)! Тепер ви можете використовувати Ubuntu разом із вашими Windows-додатками.\nЩоб дізнатися більше про розширені налаштування, розгляньте можливість ознайомлення з документацією WSL на вебсайті Microsoft.\n\n\nВстановлення Miniconda\n#створення папки miniconda3\nmkdir -p ~/miniconda3\n#Завантаження останньої версії дистрибутиву\nwget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh -O ~/miniconda3/miniconda.sh\n#Інсталяція дистрибутиву\nbash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3\n#Видалення інсталятора\nrm ~/miniconda3/miniconda.sh\nДетальніше на сайті\n\n\nВстановлення Miniconda на MacOS\nІнсталяцію дистрибутиву можна знайти на сайті розробників conda.io"
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Intro to practical course. Strategy of analysis\n\n\n\nHW: install WSL, learning basic shell commands, make HW1_shell_commands task\nPresentation - Google Slides"
+  },
+  {
+    "objectID": "syllabus.html#week-1-23.09.2025",
+    "href": "syllabus.html#week-1-23.09.2025",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Intro to practical course. Strategy of analysis\n\n\n\nHW: install WSL, learning basic shell commands, make HW1_shell_commands task\nPresentation - Google Slides"
+  },
+  {
+    "objectID": "syllabus.html#week-2-30.09.2025",
+    "href": "syllabus.html#week-2-30.09.2025",
+    "title": "Syllabus",
+    "section": "Week 2 (30.09.2025)",
+    "text": "Week 2 (30.09.2025)\n\nSanger Sequencing. Design of primers for Sanger Sequencing. SnapGene.\nHW: Designing primers for sequencing and visualization in SnapGene\nPresentation - Google Slides\nWeek 3(07.10.2025)\nNGS analysis part 1. Library preparation, sample quality assessment, QC of reads(fastQC/multiQC)"
+  },
+  {
+    "objectID": "qmd/HW1_Linux_basics.html",
+    "href": "qmd/HW1_Linux_basics.html",
+    "title": "HW1_Linux_basics",
+    "section": "",
+    "text": "Формат передачі генів (GTF) - це формат файлів, який використовується для зберігання інформації про структуру генів. Це текстовий формат з розділенням табуляцією, заснований на форматі загальних ознак (GFF), але містить деякі додаткові домовленості, специфічні для генної інформації. Важливою особливістю GTF є те, що його можна перевіряти: маючи послідовність і файл GTF, можна перевірити правильність формату. Це значно зменшує проблеми з обміном даними між групами.\n\nДані які будемо аналізувати це гени Drosophila melanogaster - модельний об’єкт для багатьох генетичних досліджень. Для цього завдання виділено 14 генів Drosophila melanogster. Вашим завданням буде проаналізувати їх та виконати вказівки описані нижче.\nСписок генів:\n\nbcd - Гоян +\n\n\n\nnos\n\n\n\nhb\n\n\n\nwg - Загній +\n\n\n\nhh - Франчук ++\n\n\n\nen - Попадик\n\n\n\nm - Жадовець ++\n\n\n\ndac - Мельник ++ \n\n\n\ngl - Джікірба +\n\n\n\nftz\n\n\n\ntwi - Павлюк +\n\n\n\ntim - Мигашко\n\n\n\nPi3K92E - Мадяр ++\n\n\n\nInR - Каряка +\n\n\nОпис завдання\nПотрібно вияснити:\n\nНа якій хромосомі знаходиться ген\ndene_id знайденого гену\ngene_source гену\nСкільки Елементів(Features) знайдено для цього гену у вигляді екзонів\nЗнайти найдовший Елемент(feature)\nЗнайти найменший Елемент(feature)\nЗаписати всі отримані резульати у вигляді таблички excel(приклад додається)\nPro-task(optional): написати скрип bash який автоматично виконає завдання(output у вигляді txt з рядками з відповідями через пробіл, приклад додається)\n\nТаблиця з кінцевим результатом матиме вигляд:\n\n\n\nОзнака\nІнформація\n\n\n\n\nРозташований на хромосомі\n3L\n\n\ngene_id\nFBgn0263995\n\n\ngene_source\nFlyBase\n\n\nКількість Елементів(Features)\n135\n\n\nMax довжина Елементу\n37\n\n\nMin довжина Елементу\n5744\n\n\n\n\n\nКрок 1. Завантаження файлу\nДля того щоб завантажити файл, використайте команду curl\nmkdir genomics_2024     # створення папки в кореневій папці\ncd genomics_2024        # Перехід у створену папку\nmkdir HW1_Linux_basics  # Створення папки у новоствореній папкці\ncd HW1_Linux_basics     # Перезід у новостворену папку\npwd                     # Перевірка шляху створених папкок\n# pwd_output: ~/genomics_2024/HW1_Linux_basics/\ncurl -O https://ftp.ensembl.org/pub/release-112/gtf/drosophila_melanogaster/Drosophila_melanogaster.BDGP6.46.112.gtf.gz # Завантаження GTF файлу референтного геному Drosophila melanogaster\n\n\nКрок 2. Використання cat, more, less, head, tail для перегляду файлу\n# Перегляд 20 рядків файлу за допомогою команди head\nhead -n 20 Drosophila_melanogaster.BDGP6.46.112.gtf\n# Перегляд останніх 20 рядків файлу за допомогою команди tail\ntail -n 20 Drosophila_melanogaster.BDGP6.46.112.gtf\n# Перегляд файлу за допомогою less\nless -S Drosophila_melanogaster.BDGP6.46.112.gtf\n# Перегляд файлу за допомогою more\nmore Drosophila_melanogaster.BDGP6.46.112.gtf\n# Перегляд файлу за допомогою cat\ncat Drosophila_melanogaster.BDGP6.46.112.gtf\n\n\nКрок 3. Пошук гену за допомогою команди grep\n# Використання команди grep для знаходження гену \"cpo\"\ngrep \\\"cpo\\\" -w Drosophila_melanogaster.BDGP6.46.112.gtf\n# Використання команиди wc для підрахунку унікальних Features(кількості рядків) для гена \"cpo\"\ngrep \\\"cpo\\\" -w Drosophila_melanogaster.BDGP6.46.112.gtf | wc -l\n# Підрахунок кількості Features гену \"cpo\" для екзонів\ngrep \\\"cpo\\\" -w Drosophila_melanogaster.BDGP6.46.112.gtf |grep -w \"exon\" | wc -l\n# Перегляд у зручному форматі за допомогою команди less\ngrep \\\"cpo\\\" -w Drosophila_melanogaster.BDGP6.46.112.gtf |grep -w \"exon\" | less -S\n# Запис відповіді у новий gtf файл\ngrep \\\"cpo\\\" -w Drosophila_melanogaster.BDGP6.46.112.gtf |grep -w \"exon\" &gt; cpo.gtf\n# відображення отриманого результату\nless -S cpo.gtf\nЗапишіть кількість Елементів(Features) у excel табличку\n\n\nКрок 4. Пошук корисної інформації про розташування гена на хромосомі, gene_id, gene_source\n# Знайти хромосому на якій розташований ген \"cpo\"\ncut -f 1 cpo.gtf | head -n 1\n# Пошук gene_id гену \"cpo\"\ncut -f 9 cpo.gtf | cut -d ';' -f 1 | head -n 1\n# Пошук gene_source гену \"cpo\"\ncut -f 9 cpo.gtf | cut -d ';' -f 5 | head -n 1\nТаким чином отримали інформацію про хромосому, gene_id та gene_source. Запишіть отримані результати у Excel табличку\n\n\nКрок 5. Знаходження Min та Max елементів(features) гена\n# Оберіть відповідні колонки в яких міститься інформація про початок та кінець транскрипту\ncut -f 4,5 cpo.gtf &gt; length_gene.txt\n# відніміть значення колонки 2 від колонки 1 та запишіть у новий файл min_max_gene.txt\nawk '{print $2 - $1}' length_gene.txt &gt; min_max_gene.txt\n# Знайти мінімальне число Елементу(Feature) гена\nsort -n min_max_gene.txt | head -n 1\n# Знайти максимальне число Елементу(Feature) гена\nsort -n min_max_gene.txt | tail -n 1\n# Продвинутіший спосіб знаходження min та max\nawk 'NR == 1 {min = $1} $1 &lt; min {min = $1} END {print min}' min_max_gene.txt\nawk 'NR == 1 {max = $1} $1 &gt; max {max = $1} END {print max}' min_max_gene.txt\nЗапишіть знайдені min та max довжину Елементів(Features) у табличку\n\n\nКрок 6. (Optional) Shell скрипт\nНапишіть shell скрипт для оптимізації процесу та анотації генів у автоматичному режимі"
+  },
+  {
+    "objectID": "syllabus.html#week-307.10.2025",
+    "href": "syllabus.html#week-307.10.2025",
+    "title": "Syllabus",
+    "section": "Week 3(07.10.2025)",
+    "text": "Week 3(07.10.2025)\n\nNGS analysis part 1. Library preparation, sample quality assessment, QC of reads(fastQC/multiQC)\nHW:\nPresentation:"
+  },
+  {
+    "objectID": "syllabus.html#week-414.10.2025",
+    "href": "syllabus.html#week-414.10.2025",
+    "title": "Syllabus",
+    "section": "Week 4(14.10.2025)",
+    "text": "Week 4(14.10.2025)\n\nNGS analysis part 2. Mapping reads to reference genome. SAM/BAM files. De novo assembly.\nHW:\nPresentation:"
+  },
+  {
+    "objectID": "syllabus.html#week-521.10.2025",
+    "href": "syllabus.html#week-521.10.2025",
+    "title": "Syllabus",
+    "section": "Week 5(21.10.2025)",
+    "text": "Week 5(21.10.2025)\n\nNGS analysis part 3. Variant calling. VCF files. Annotation of variants\nHW:\nPresentation: ## Week 6(28.10.2025)\nTypes of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants\nHW:\nPresentation: ## Week 7(04.11.2025)\nAnalysis of annotated VCF files.VEP.Fst.Tadjima’s D.\nHW:\nPresentation: ## Week 8(11.11.2025)\nOxford Nanopore sequencing. Long reads. Applications.\nHW:\nPresentation: ## Week 9(18.11.2025)\nR in genomics\nHW:\nPresentation: ## Week 10(25.11.2025)\nGuest Lecture"
+  },
+  {
+    "objectID": "syllabus.html#week-1102.12.2025",
+    "href": "syllabus.html#week-1102.12.2025",
+    "title": "Syllabus",
+    "section": "Week 11(02.12.2025)",
+    "text": "Week 11(02.12.2025)\n\nTBA"
+  },
+  {
+    "objectID": "syllabus.html#week-1209.12.2025",
+    "href": "syllabus.html#week-1209.12.2025",
+    "title": "Syllabus",
+    "section": "Week 12(09.12.2025)",
+    "text": "Week 12(09.12.2025)\n\nPresentation group’s results. Summary of the course"
   }
 ]

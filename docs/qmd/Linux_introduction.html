@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Nazarii Hrubiian">
+
+<title>1. Основні команди Linux – Structural and Functional Genomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-9fc9979f13c68dab769c953c4c7d8074.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../iht-logo-100.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Structural and Functional Genomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../syllabus.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#основні-команди-linux" id="toc-основні-команди-linux" class="nav-link active" data-scroll-target="#основні-команди-linux">Основні команди Linux</a>
+  <ul class="collapse">
+  <li><a href="#cd" id="toc-cd" class="nav-link" data-scroll-target="#cd"><strong>cd</strong></a></li>
+  <li><a href="#ls" id="toc-ls" class="nav-link" data-scroll-target="#ls"><strong>ls</strong></a></li>
+  <li><a href="#df" id="toc-df" class="nav-link" data-scroll-target="#df"><strong>df</strong></a></li>
+  <li><a href="#mv" id="toc-mv" class="nav-link" data-scroll-target="#mv"><strong>mv</strong></a></li>
+  <li><a href="#mkdir" id="toc-mkdir" class="nav-link" data-scroll-target="#mkdir"><strong>mkdir</strong></a></li>
+  <li><a href="#rm" id="toc-rm" class="nav-link" data-scroll-target="#rm"><strong>rm</strong></a></li>
+  <li><a href="#cat" id="toc-cat" class="nav-link" data-scroll-target="#cat"><strong>cat</strong></a></li>
+  <li><a href="#gunzip" id="toc-gunzip" class="nav-link" data-scroll-target="#gunzip"><strong>gunzip</strong></a></li>
+  <li><a href="#zcat" id="toc-zcat" class="nav-link" data-scroll-target="#zcat"><strong>zcat</strong></a></li>
+  <li><a href="#grep" id="toc-grep" class="nav-link" data-scroll-target="#grep"><strong>grep</strong></a></li>
+  <li><a href="#echo" id="toc-echo" class="nav-link" data-scroll-target="#echo"><strong>echo</strong></a></li>
+  <li><a href="#ps" id="toc-ps" class="nav-link" data-scroll-target="#ps"><strong>ps</strong></a></li>
+  <li><a href="#top" id="toc-top" class="nav-link" data-scroll-target="#top"><strong>top</strong></a></li>
+  <li><a href="#head" id="toc-head" class="nav-link" data-scroll-target="#head"><strong>head</strong></a></li>
+  <li><a href="#tail" id="toc-tail" class="nav-link" data-scroll-target="#tail"><strong>tail</strong></a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"><strong>|</strong></a></li>
+  <li><a href="#man" id="toc-man" class="nav-link" data-scroll-target="#man"><strong>man</strong></a></li>
+  <li><a href="#touch" id="toc-touch" class="nav-link" data-scroll-target="#touch"><strong>touch</strong></a></li>
+  <li><a href="#gzip" id="toc-gzip" class="nav-link" data-scroll-target="#gzip"><strong>gzip</strong></a></li>
+  <li><a href="#ssh" id="toc-ssh" class="nav-link" data-scroll-target="#ssh"><strong>ssh</strong></a></li>
+  <li><a href="#comm" id="toc-comm" class="nav-link" data-scroll-target="#comm"><strong>comm</strong></a></li>
+  <li><a href="#kill" id="toc-kill" class="nav-link" data-scroll-target="#kill"><strong>kill</strong></a></li>
+  <li><a href="#chmod" id="toc-chmod" class="nav-link" data-scroll-target="#chmod"><strong>chmod</strong></a></li>
+  <li><a href="#chown" id="toc-chown" class="nav-link" data-scroll-target="#chown"><strong>chown</strong></a></li>
+  <li><a href="#wget" id="toc-wget" class="nav-link" data-scroll-target="#wget"><strong>wget</strong></a></li>
+  <li><a href="#sudo" id="toc-sudo" class="nav-link" data-scroll-target="#sudo"><strong>sudo</strong></a></li>
+  <li><a href="#tree" id="toc-tree" class="nav-link" data-scroll-target="#tree"><strong>tree</strong></a></li>
+  <li><a href="#pwd" id="toc-pwd" class="nav-link" data-scroll-target="#pwd"><strong>pwd</strong></a></li>
+  <li><a href="#wc" id="toc-wc" class="nav-link" data-scroll-target="#wc"><strong>wc</strong></a></li>
+  <li><a href="#history" id="toc-history" class="nav-link" data-scroll-target="#history"><strong>history</strong></a></li>
+  <li><a href="#more" id="toc-more" class="nav-link" data-scroll-target="#more"><strong>more</strong></a></li>
+  <li><a href="#less" id="toc-less" class="nav-link" data-scroll-target="#less"><strong>less</strong></a></li>
+  <li><a href="#cut" id="toc-cut" class="nav-link" data-scroll-target="#cut"><strong>cut</strong></a></li>
+  <li><a href="#awk" id="toc-awk" class="nav-link" data-scroll-target="#awk"><strong>awk</strong></a></li>
+  </ul></li>
+  <li><a href="#корисні-поради-при-використанні-терміналу" id="toc-корисні-поради-при-використанні-терміналу" class="nav-link" data-scroll-target="#корисні-поради-при-використанні-терміналу">Корисні поради при використанні терміналу</a></li>
+  <li><a href="#корисні-посилання" id="toc-корисні-посилання" class="nav-link" data-scroll-target="#корисні-посилання">Корисні посилання</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">1. Основні команди Linux</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Nazarii Hrubiian </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="основні-команди-linux" class="level1">
+<h1>Основні команди Linux</h1>
+<section id="cd" class="level2">
+<h2 class="anchored" data-anchor-id="cd"><strong>cd</strong></h2>
+<p>(Change Directory) Зміна директорії</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /path/to/directory  <span class="co"># Перехід до конкретного каталогу</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~                   <span class="co"># Перехід до домашнього каталогу</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ..                  <span class="co"># Повернення до попередньої директорії</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ls" class="level2">
+<h2 class="anchored" data-anchor-id="ls"><strong>ls</strong></h2>
+<p>(List Directory) Відображення вмісту каталогу</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span>                      <span class="co"># Перелік файлів у поточному каталозі</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span>                   <span class="co"># Виведення зі списком та атрибутами файлів</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-a</span>                   <span class="co"># Відображення прихованих файлів</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-lh</span>                  <span class="co"># Відображення списку із розмірами файлів</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-R</span>                   <span class="co"># Рекурсивний список всіх файлів у підкаталогах</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-la</span>                  <span class="co"># Виведення прихованих файлів з детальним описом</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="df" class="level2">
+<h2 class="anchored" data-anchor-id="df"><strong>df</strong></h2>
+<p>(Disk Free) Команда для зміни поточного робочого каталогу</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span>                      <span class="co"># Виведення використання диску для всіх файлових систем</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-h</span>                   <span class="co"># Використання диску в доступній формі (GB, MB)</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-T</span>                   <span class="co"># Показує тип файлової системи</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">df</span> <span class="at">-i</span>                   <span class="co"># Показує використання індексних дескрипторів (inodes)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mv" class="level2">
+<h2 class="anchored" data-anchor-id="mv"><strong>mv</strong></h2>
+<p>(Move) Переміщення або перейменування файлів і каталогів.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> file.txt /new/path/        <span class="co"># Переміщення файлу до нового каталогу</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> old_name.txt new_name.txt  <span class="co"># Перейменування файлу</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="pp">*</span>.txt /new/path/           <span class="co"># Переміщення всіх .txt файлів</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">mv</span> <span class="at">-i</span> file.txt /new/path/     <span class="co"># Підтвердження перед перезаписом файлів</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="mkdir" class="level2">
+<h2 class="anchored" data-anchor-id="mkdir"><strong>mkdir</strong></h2>
+<p>(Make Directory) Створення нових каталогів</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> new_directory     <span class="co"># Створення нового каталогу</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> <span class="at">-p</span> /path/to/dir   <span class="co"># Створення структури каталогів (включаючи всі проміжні)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="rm" class="level2">
+<h2 class="anchored" data-anchor-id="rm"><strong>rm</strong></h2>
+<p>(Remove) Створення нових каталогів</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> file.txt             <span class="co"># Видалення файлу</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-r</span> directory         <span class="co"># Рекурсивне видалення каталогу з вмістом</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-f</span> file.txt          <span class="co"># Примусове видалення файлу без підтвердження</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-i</span> file.txt          <span class="co"># Підтвердження перед кожним видаленням</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="cat" class="level2">
+<h2 class="anchored" data-anchor-id="cat"><strong>cat</strong></h2>
+<p>(Concatenate) Відображення вмісту файлу або об’єднання файлів.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> file.txt            <span class="co"># Відображення вмісту файлу</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> file1.txt file2.txt <span class="co"># Об'єднання кількох файлів у вивід</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> file.txt <span class="op">&gt;</span> newfile.txt  <span class="co"># Створення нового файлу з копією вмісту</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="gunzip" class="level2">
+<h2 class="anchored" data-anchor-id="gunzip"><strong>gunzip</strong></h2>
+<p>(Uncompress) Розпаковує стиснені файли у форматі .gz.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> file.gz          <span class="co"># Розпаковує файл і видаляє оригінал .gz</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> <span class="at">-k</span> file.gz       <span class="co"># Розпаковує файл, залишаючи оригінал</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gunzip</span> <span class="pp">*</span>.gz             <span class="co"># Розпаковує всі файли з розширенням .gz</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="zcat" class="level2">
+<h2 class="anchored" data-anchor-id="zcat"><strong>zcat</strong></h2>
+<p>(Concatenate Compressed Files) Перегляд стисненого файлу без розпаковування.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">zcat</span> file.gz            <span class="co"># Перегляд вмісту стисненого файлу</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">zcat</span> file1.gz file2.gz  <span class="co"># Перегляд вмісту кількох стиснених файлів</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="grep" class="level2">
+<h2 class="anchored" data-anchor-id="grep"><strong>grep</strong></h2>
+<p>(Global Regular Expression Print) Пошук тексту у файлах за шаблоном.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="st">'pattern'</span> file.txt         <span class="co"># Пошук рядків, що містять 'pattern' у файлі</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-i</span> <span class="st">'pattern'</span> file.txt      <span class="co"># Пошук без урахування регістру</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-r</span> <span class="st">'pattern'</span> /path/to/dir  <span class="co"># Рекурсивний пошук по всьому каталогу</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-v</span> <span class="st">'pattern'</span> file.txt      <span class="co"># Виведення рядків, що не містять 'pattern'</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">--color</span> <span class="st">"example"</span> file.txt   <span class="co"># Виділяє "example" у виведенні</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">--color</span> <span class="at">-w</span> <span class="st">"example"</span> file.txt   <span class="co"># Пошук цілого слова з підкресленням знайдених збігів</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">--color</span> <span class="dt">\"</span>PTPN22<span class="dt">\"</span> file.txt    <span class="co">#Виділення рядків, якщо в них є регулярні вирази у дужках</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="echo" class="level2">
+<h2 class="anchored" data-anchor-id="echo"><strong>echo</strong></h2>
+<p>(Display a Line of Text) Виведення тексту або змінної в термінал.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Hello, World!"</span>    <span class="co"># Виведення тексту</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$HOME</span>              <span class="co"># Виведення значення змінної</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Line 1\nLine 2"</span>   <span class="co"># Виведення з новими рядками</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ps" class="level2">
+<h2 class="anchored" data-anchor-id="ps"><strong>ps</strong></h2>
+<p>(Process Status) Виводить інформацію про активні процеси.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span>                      <span class="co"># Показує процеси поточного користувача</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux                  <span class="co"># Показує всі процеси у системі</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> <span class="at">-eF</span>                  <span class="co"># Детальна інформація про всі процеси</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> <span class="at">-p</span> 12345             <span class="co"># Інформація про процес за його PID</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="top" class="level2">
+<h2 class="anchored" data-anchor-id="top"><strong>top</strong></h2>
+<p>(Task Manager) Інтерактивне відображення процесів та їхнього використання ресурсів у реальному часі.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">top</span>                     <span class="co"># Запуск топ з інформацією про процеси</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">top</span> <span class="at">-u</span> username         <span class="co"># Показує процеси конкретного користувача</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="head" class="level2">
+<h2 class="anchored" data-anchor-id="head"><strong>head</strong></h2>
+<p>(Output the First Part of Files) Виводить перші рядки файлу.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> file.txt           <span class="co"># Перші 10 рядків файлу за замовчуванням</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span> <span class="at">-n</span> 20 file.txt     <span class="co"># Перші 20 рядків файлу</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tail" class="level2">
+<h2 class="anchored" data-anchor-id="tail"><strong>tail</strong></h2>
+<p>(Output the Last Part of Files) Виводить останні рядки файлу.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> file.txt           <span class="co"># Останні 10 рядків файлу за замовчуванням</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-n</span> 20 file.txt     <span class="co"># Останні 20 рядків файлу</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span> <span class="at">-f</span> file.txt        <span class="co"># Виведення нових рядків у реальному часі (відстеження логу)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><strong>|</strong></h2>
+<p>(Pipe) Передає виведення однієї команди як вхід для іншої.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="kw">|</span> <span class="fu">grep</span> <span class="st">'file'</span>        <span class="co"># Пошук файлів у виводі команди ls</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ps</span> aux <span class="kw">|</span> <span class="fu">grep</span> <span class="st">'process'</span> <span class="co"># Пошук процесу у виводі ps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="man" class="level2">
+<h2 class="anchored" data-anchor-id="man"><strong>man</strong></h2>
+<p>(Manual) Виводить документацію для команд.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> ls                  <span class="co"># Відображає документацію для команди ls</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">man</span> <span class="at">-k</span> <span class="st">'search_term'</span>    <span class="co"># Пошук команд за ключовим словом</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="touch" class="level2">
+<h2 class="anchored" data-anchor-id="touch"><strong>touch</strong></h2>
+<p>(Update Timestamp or Create Empty File) Створює новий порожній файл або оновлює час модифікації існуючого.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> newfile.txt       <span class="co"># Створення нового файлу</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">touch</span> <span class="at">-a</span> file.txt       <span class="co"># Оновлення часу доступу до файлу</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="gzip" class="level2">
+<h2 class="anchored" data-anchor-id="gzip"><strong>gzip</strong></h2>
+<p>(Compress) Стискання файлів.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gzip</span> file.txt           <span class="co"># Стиснення файлу</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">gzip</span> <span class="at">-k</span> file.txt        <span class="co"># Стиснення без видалення оригіналу</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">gzip</span> <span class="pp">*</span>.txt              <span class="co"># Стиснення всіх текстових файлів у каталозі</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="ssh" class="level2">
+<h2 class="anchored" data-anchor-id="ssh"><strong>ssh</strong></h2>
+<p>(Secure Shell) Безпечне віддалене з’єднання з сервером.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> user@hostname       <span class="co"># Підключення до сервера</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="at">-i</span> keyfile.pem user@hostname  <span class="co"># Підключення з використанням ключа</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="comm" class="level2">
+<h2 class="anchored" data-anchor-id="comm"><strong>comm</strong></h2>
+<p>(Compare Two Sorted Files) Створення нових каталогів</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">comm</span> file1.txt file2.txt <span class="co"># Порівняння файлів</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">comm</span> <span class="at">-1</span> file1.txt file2.txt <span class="co"># Виведення відмінностей у другому файлі</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="kill" class="level2">
+<h2 class="anchored" data-anchor-id="kill"><strong>kill</strong></h2>
+<p>(Terminate Process) Команда для завершення процесів за їхнім PID.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">kill</span> 12345             <span class="co"># Завершення процесу з PID 12345</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">kill</span> <span class="at">-9</span> 12345          <span class="co"># Примусове завершення процесу з PID 12345</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="chmod" class="level2">
+<h2 class="anchored" data-anchor-id="chmod"><strong>chmod</strong></h2>
+<p>(Change Mode) Зміна прав доступу до файлів і каталогів.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> 755 file.txt     <span class="co"># Встановлення прав доступу (власник: читання, запис, виконання; група і інші: тільки читання і виконання)</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> u+x file.txt     <span class="co"># Додавання права виконання для власника</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> <span class="at">-R</span> 644 directory <span class="co"># Рекурсивна зміна прав доступу для всіх файлів у каталозі</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="fu">chmod</span> a-w file.txt     <span class="co"># Відбір прав запису для всіх</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="chown" class="level2">
+<h2 class="anchored" data-anchor-id="chown"><strong>chown</strong></h2>
+<p>(Change Owner) Зміна власника файлів і каталогів.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chown</span> user:group file.txt      <span class="co"># Зміна власника і групи файлу</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">chown</span> <span class="at">-R</span> user:group directory  <span class="co"># Рекурсивна зміна власника для каталогу та всіх його файлів</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">chown</span> user file.txt            <span class="co"># Зміна лише власника</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="wget" class="level2">
+<h2 class="anchored" data-anchor-id="wget"><strong>wget</strong></h2>
+<p>(Download Files from the Web) Створення нових каталогів</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> http://example.com/file.zip      <span class="co"># Завантаження файлу з вказаної URL</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-c</span> http://example.com/file.zip   <span class="co"># Продовження завантаження з місця переривання</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-r</span> http://example.com/           <span class="co"># Рекурсивне завантаження всього сайту</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">--limit-rate</span><span class="op">=</span>200k http://example.com/file.zip  <span class="co"># Обмеження швидкості завантаження</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sudo" class="level2">
+<h2 class="anchored" data-anchor-id="sudo"><strong>sudo</strong></h2>
+<p>(Make Directory) Створення нових каталогів</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get update      <span class="co"># Оновлення системи на рівні адміністратора</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> systemctl restart apache2  <span class="co"># Перезапуск служби</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> su                  <span class="co"># Перехід до суперкористувача (root)</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> visudo              <span class="co"># Редагування конфігураційного файлу sudoers</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="tree" class="level2">
+<h2 class="anchored" data-anchor-id="tree"><strong>tree</strong></h2>
+<p>Відображення структури каталогів і файлів у вигляді дерева</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ex">tree</span>                      <span class="co"># Виводить структуру поточного каталогу у вигляді дерева</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="ex">tree</span> /path/to/directory   <span class="co"># Виводить структуру вказаного каталогу</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="ex">tree</span> <span class="at">-a</span>                   <span class="co"># Показує всі файли, включаючи приховані</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="ex">tree</span> <span class="at">-d</span>                   <span class="co"># Виводить тільки каталоги</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="ex">tree</span> <span class="at">-f</span>                   <span class="co"># Виводить повні шляхи до файлів і каталогів</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="ex">tree</span> <span class="at">-h</span>                   <span class="co"># Показує розмір файлів у форматі кілобайт/мегабайт</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="pwd" class="level2">
+<h2 class="anchored" data-anchor-id="pwd"><strong>pwd</strong></h2>
+<p>(Print Working Directory) Створення нових каталогів</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span>                       <span class="co"># Виводить абсолютний шлях до поточного робочого каталогу</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="bu">pwd</span> <span class="at">-P</span>                    <span class="co"># Показує фізичний шлях, реальний без символічних посилань</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="wc" class="level2">
+<h2 class="anchored" data-anchor-id="wc"><strong>wc</strong></h2>
+<p>(Word Count) Підрахунок кількості рядків, слів і символів у файлі або виведенні тексту.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> file.txt             <span class="co"># Підрахунок кількості рядків, слів і символів у файлі</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> file.txt          <span class="co"># Підрахунок кількості рядків у файлі</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-w</span> file.txt          <span class="co"># Підрахунок кількості слів у файлі</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-c</span> file.txt          <span class="co"># Підрахунок кількості байтів у файлі</span></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-m</span> file.txt          <span class="co"># Підрахунок кількості символів у файлі (якщо використовується багатобайтове кодування)</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-L</span> file.txt          <span class="co"># Виведення довжини найдовшого рядка в символах</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="fu">wc</span> <span class="at">-l</span> file1.txt file2.txt    <span class="co"># Підрахунок рядків у кількох файлах</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="history" class="level2">
+<h2 class="anchored" data-anchor-id="history"><strong>history</strong></h2>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">history</span>                    <span class="co"># Виводить список усіх раніше виконаних команд</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="bu">history</span> 10                 <span class="co"># Виводить останні 10 виконаних команд</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="ex">!123</span>                       <span class="co"># Виконує команду з номером 123 з історії</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="ex">!!</span>                         <span class="co"># Повторює останню виконану команду</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="ex">!grep</span>                      <span class="co"># Виконує останню команду з історії, яка містить "grep"</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="bu">history</span> <span class="at">-c</span>                 <span class="co"># Очищає історію виконаних команд</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="bu">history</span> <span class="at">-w</span> filename        <span class="co"># Зберігає історію команд у файл filename</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a><span class="bu">history</span> <span class="at">-r</span> filename        <span class="co"># Завантажує історію команд з файлу filename</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="more" class="level2">
+<h2 class="anchored" data-anchor-id="more"><strong>more</strong></h2>
+<p>тПосторінковий перегляд вмісту файлу або виведення тексту в терміналі. Вона дозволяє переглядати текст поступово, прокручуючи його по сторінках.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">more</span> file.txt              <span class="co"># Відкриває файл для посторінкового перегляду</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span> file.txt <span class="kw">|</span> <span class="fu">more</span>        <span class="co"># Виводить вміст файлу за допомогою cat і посторінково з more</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">more</span> <span class="at">-num</span> file.txt         <span class="co"># Виводить файл, показуючи num рядків одночасно</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="fu">more</span> +n file.txt           <span class="co"># Починає показ із рядка n у файлі</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">more</span> <span class="pp">*</span>.txt                 <span class="co"># Послідовно переглядає кілька файлів .txt посторінково</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="bu">command</span> <span class="kw">|</span> <span class="fu">more</span>             <span class="co"># Показує виведення будь-якої команди посторінково</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="less" class="level2">
+<h2 class="anchored" data-anchor-id="less"><strong>less</strong></h2>
+<p>Команда <strong>less</strong> схожа на <strong>more</strong>, але з додатковими можливостями для перегляду файлів та виведення команд у терміналі. Вона дозволяє прокручувати текст як вперед, так і назад, і підтримує більше команд для навігації.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> file.txt              <span class="co"># Відкриває файл для посторінкового перегляду</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> +10 file.txt          <span class="co"># Починає показ із 10-го рядка файлу</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-l</span> <span class="kw">|</span> <span class="fu">less</span>               <span class="co"># Виводить результат команди ls -l посторінково</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> file1.txt file2.txt    <span class="co"># Виводить кілька файлів один за одним</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> +F file.txt           <span class="co"># Моніторить файл у реальному часі (схоже на tail -f)</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">less</span> <span class="at">-S</span> file.txt           <span class="co"># Виводить файл без переносу довгих рядків</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Корисні клавіші під час перегляду файлу:</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Space – наступна сторінка</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co"># b – попередня сторінка</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="co"># /текст – пошук тексту</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="co"># n – наступний результат пошуку</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="co"># q – вихід з перегляду</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="cut" class="level2">
+<h2 class="anchored" data-anchor-id="cut"><strong>cut</strong></h2>
+<p>Команда <strong>cut</strong> використовується в Unix/Linux для вибору частин рядків з текстових файлів або стандартного введення. Вона може використовуватися для видалення певних колонок, символів або полів з кожного рядка</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-f</span> 1,3 file.txt          <span class="co"># Вибір 1-ї та 3-ї колонок з табуляцією як роздільником</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-c</span> 1-5 file.txt          <span class="co"># Вибір символів з 1 по 5 з кожного рядка</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-d</span> <span class="st">','</span> <span class="at">-f</span> 2 file.csv     <span class="co"># Вибір 2-го поля з файлу CSV, де поля розділені комою</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-d</span> <span class="st">':'</span> <span class="at">-f</span> 3 /etc/passwd   <span class="co"># Вибір 3-го поля з файлу /etc/passwd</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-c</span> 3- file.txt           <span class="co"># Вибір символів, починаючи з 3-го до кінця рядка</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-d</span> <span class="st">','</span> <span class="at">-f</span> 1,3 file.csv    <span class="co"># Вибір 1-ї та 3-ї колонок з файлу CSV</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="fu">cut</span> <span class="at">-c</span> 1-10 file.txt         <span class="co"># Вибір перших 10 символів з кожного рядка</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="awk" class="level2">
+<h2 class="anchored" data-anchor-id="awk"><strong>awk</strong></h2>
+<p><strong>awk</strong> — це потужна командна утиліта для обробки і аналізу текстових файлів в Unix/Linux системах. Вона дозволяє працювати з рядками та полями (колонками) тексту, обчислювати значення та застосовувати різні дії до кожного рядка.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'{print}'</span> file.txt     <span class="co"># Виводить всі рядки з файлу</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'{print $1}'</span> file.txt  <span class="co"># Виводить першу колонку</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'$2 &gt; 100 {print $0}'</span> file.txt  <span class="co"># Виводить рядки, де значення у 2-й колонці більше за 100</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-F</span> <span class="st">','</span> <span class="st">'{print $1, $3}'</span> file.csv  <span class="co"># Виводить 1-шу і 3-тю колонки з файлу CSV</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'{sum += $1} END {print sum}'</span> file.txt  <span class="co"># Підсумовує значення з 1-ї колонки</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="at">-v</span> threshold=50 <span class="st">'$2 &gt; threshold {print $1, $2}'</span> file.txt  <span class="co"># Виводить рядки, де 2-а колонка більше за 50</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'{print $2 - $1}'</span> file.txt  <span class="co"># Виводить різницю між 2-ю і 1-ю колонками</span></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'NR == 1 {min = $1} $1 &lt; min {min = $1} END {print min}'</span> file.txt  <span class="co"># Мінімальне значення в 1-й колонці</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="fu">awk</span> <span class="st">'NR == 1 {max = $1} $1 &gt; max {max = $1} END {print max}'</span> file.txt  <span class="co"># Максимальне значення в 1-й колонці</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="корисні-поради-при-використанні-терміналу" class="level1">
+<h1>Корисні поради при використанні терміналу</h1>
+<ul>
+<li>Повертайтеся до попередніх команд за допомогою клавіш стрілок(PgUp,PgDn)</li>
+<li>Натисніть одночасно клавіші «Ctrl» і «r», щоб розпочати пошук команд, які містять пошукові терміни.</li>
+<li>Використовуйте клавіші зі стрілками для циклічного перегляду всіх команд, які відповідають умовам пошуку.</li>
+<li>Використовуйте клавішу «Tab» для автозаповнення.</li>
+<li>Натисніть одночасно клавіші «Ctrl» і «c», щоб завершити команду.</li>
+</ul>
+</section>
+<section id="корисні-посилання" class="level1">
+<h1>Корисні посилання</h1>
+<ul>
+<li><a href="https://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html">Bash Reference Manual</a></li>
+<li><a href="https://linuxguide.rozh2sch.org.ua/">Основи Linux українською</a></li>
+<li><a href="https://github.com/naumenko-sa/bioinf_posibnyk_public/blob/main/bioinf_posibnyk.pdf">Посібник з біоінформатики Сергія Науменка</a></li>
+<li><a href="https://itedu.center/ua/blog/guides/shell-scripting-for-beginners/?srsltid=AfmBOorm1nsiWgtSSaW4cIy9ChURvRaY9jOcGECsgn8ndIJsf5fMMEJS">Як писати скрипти Shell</a></li>
+<li><a href="https://docs.google.com/presentation/d/1YSXYqCSHUZGRVr00oTttv_v1u83ccPLpF5_TMtW0iRI/edit#slide=id.g1b53b9035b_0_151">Лекція 2 з курсу Applied Computational Genomics by Aaron Quinlan</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
