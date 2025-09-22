@@ -291,7 +291,7 @@
     "href": "syllabus.html#week-2-30.09.2025",
     "title": "Syllabus",
     "section": "Week 2 (30.09.2025)",
-    "text": "Week 2 (30.09.2025)\n\nSanger Sequencing. Design of primers for Sanger Sequencing. SnapGene.\nHW: Designing primers for sequencing and visualization in SnapGene\nPresentation - Google Slides\nWeek 3(07.10.2025)\nNGS analysis part 1. Library preparation, sample quality assessment, QC of reads(fastQC/multiQC)"
+    "text": "Week 2 (30.09.2025)\n\nSanger Sequencing. Design of primers for Sanger Sequencing. SnapGene.\nHW: Designing primers for sequencing and visualization in SnapGene\nPresentation - Google Slides"
   },
   {
     "objectID": "qmd/HW1_Linux_basics.html",
@@ -319,7 +319,7 @@
     "href": "syllabus.html#week-521.10.2025",
     "title": "Syllabus",
     "section": "Week 5(21.10.2025)",
-    "text": "Week 5(21.10.2025)\n\nNGS analysis part 3. Variant calling. VCF files. Annotation of variants\nHW:\nPresentation: ## Week 6(28.10.2025)\nTypes of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants\nHW:\nPresentation: ## Week 7(04.11.2025)\nAnalysis of annotated VCF files.VEP.Fst.Tadjima’s D.\nHW:\nPresentation: ## Week 8(11.11.2025)\nOxford Nanopore sequencing. Long reads. Applications.\nHW:\nPresentation: ## Week 9(18.11.2025)\nR in genomics\nHW:\nPresentation: ## Week 10(25.11.2025)\nGuest Lecture"
+    "text": "Week 5(21.10.2025)\n\nNGS analysis part 3. Variant calling. VCF files. Annotation of variants\nHW:\nPresentation:"
   },
   {
     "objectID": "syllabus.html#week-1102.12.2025",
@@ -334,5 +334,40 @@
     "title": "Syllabus",
     "section": "Week 12(09.12.2025)",
     "text": "Week 12(09.12.2025)\n\nPresentation group’s results. Summary of the course"
+  },
+  {
+    "objectID": "syllabus.html#week-628.10.2025",
+    "href": "syllabus.html#week-628.10.2025",
+    "title": "Syllabus",
+    "section": "Week 6(28.10.2025)",
+    "text": "Week 6(28.10.2025)\n\nTypes of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants\nHW:\nPresentation:"
+  },
+  {
+    "objectID": "syllabus.html#week-704.11.2025",
+    "href": "syllabus.html#week-704.11.2025",
+    "title": "Syllabus",
+    "section": "Week 7(04.11.2025)",
+    "text": "Week 7(04.11.2025)\n\nAnalysis of annotated VCF files.VEP.Fst.Tadjima’s D.\nHW:\nPresentation:"
+  },
+  {
+    "objectID": "syllabus.html#week-811.11.2025",
+    "href": "syllabus.html#week-811.11.2025",
+    "title": "Syllabus",
+    "section": "Week 8(11.11.2025)",
+    "text": "Week 8(11.11.2025)\n\nOxford Nanopore sequencing. Long reads. Applications.\nHW:\nPresentation:"
+  },
+  {
+    "objectID": "syllabus.html#week-918.11.2025",
+    "href": "syllabus.html#week-918.11.2025",
+    "title": "Syllabus",
+    "section": "Week 9(18.11.2025)",
+    "text": "Week 9(18.11.2025)\n\nR in genomics\nHW:\nPresentation:"
+  },
+  {
+    "objectID": "syllabus.html#week-1025.11.2025",
+    "href": "syllabus.html#week-1025.11.2025",
+    "title": "Syllabus",
+    "section": "Week 10(25.11.2025)",
+    "text": "Week 10(25.11.2025)\n\nGuest Lecture"
   }
 ]
