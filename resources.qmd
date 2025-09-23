@@ -1,3 +1,36 @@
 ---
 title: "Resourses"
 ---
+
+## Good recommendations to start with
+
+-   Genomics tools and resources - [GitHub](https://github.com/crazyhottommy/getting-started-with-genomics-tools-and-resources?tab=readme-ov-file)
+
+-   [NCBI Tutorials and Webinars](https://www.ncbi.nlm.nih.gov/home/tutorials/)
+
+-   [EMBL-EBI Training](https://www.ebi.ac.uk/training/online/)
+
+
+## Bioinformatics courses
+
+-   [Introduction to computational biology by Mike Love](https://biodatascience.github.io/compbio/)
+-   [Applied Computational Genomics By Aaron Quilan](https://github.com/quinlan-lab/applied-computational-genomics#course-lecture-slides)
+- [Structural and Functional Genomics Course](https://drive.google.com/drive/folders/1SBncGk2tQ1PPmdaPAjz-NIovsROZKrKj)
+
+## Books
+
+-   [Генетика Сиволоб](https://biomed.knu.ua/images/stories/Kafedry/Genetika/Biblioteka/Genetyka_site/Genetics_sivolob_et_al.pdf)
+-   [Молекулярна біологія Сиволоб 2023](https://drive.google.com/file/d/17B5vbVynpqq8co08fYty7iT3k0TSxMAv/view)
+- [Modern Statistics for Modern Biology](https://www.huber.embl.de/msmb/)
+
+
+## Research Articles
+
+## Useful Links / Opportunities in Ukraine
+
+- [NGO Bioinformatics for Ukraine](https://bioinformaticsforukraine.com/)
+- [NGO GenomicsUA](https://genomics.org.ua/legal/)
+- [UBDS^3 Summer School](https://www.bds3.org/)
+- [CRABS Summer School](https://crabs.kse.ua/)
+- [Ukraininan school in Evolutionary Biology](https://biology.karazin.ua/useb-evolbiol.html)
+- [Odesa Bio Summer School](https://www.facebook.com/BioSummerSchoolONU/)
