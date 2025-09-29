@@ -10,6 +10,9 @@ title: "Resourses"
 
 -   [EMBL-EBI Training](https://www.ebi.ac.uk/training/online/)
 
+- [Linux Basics by Martin Hölzer, EEBG 2024](https://docs.google.com/presentation/d/14xELo7lDbd-FYuy144ZDK1tV_ZBdBYun_COelrKYWps/edit?slide=id.p#slide=id.p)
+- [Introduction to UNIX command line](https://ngs-docs.github.io/2021-august-remote-computing/introduction-to-the-unix-command-line.html)
+- [Workflow Manegment System by Martin Hölzer, EEBG 2024](https://docs.google.com/presentation/d/1CgFtt7W3c4mlJ9Asd0cQA0L72dPEiGHhonAhxWoDwZA/edit?slide=id.p1#slide=id.p1)
 
 ## Bioinformatics courses
 
