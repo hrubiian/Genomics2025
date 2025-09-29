@@ -291,7 +291,7 @@
     "href": "syllabus.html#week-2-30.09.2025",
     "title": "Syllabus",
     "section": "Week 2 (30.09.2025)",
-    "text": "Week 2 (30.09.2025)\n\nSanger Sequencing. Design of primers for Sanger Sequencing. SnapGene.\nHW: Designing primers for sequencing and visualization in SnapGene\nPresentation - Google Slides"
+    "text": "Week 2 (30.09.2025)\n\nSanger Sequencing. Design of primers for Sanger Sequencing. SnapGene\nHW: Install SnapGene Viewer. Make HW2_SnapGene task.\nPresentation - Google Slides"
   },
   {
     "objectID": "qmd/HW1_Linux_basics.html",
@@ -375,14 +375,14 @@
     "href": "resources.html",
     "title": "Resourses",
     "section": "",
-    "text": "Genomics tools and resources - GitHub\nNCBI Tutorials and Webinars\nEMBL-EBI Training"
+    "text": "Genomics tools and resources - GitHub\nNCBI Tutorials and Webinars\nEMBL-EBI Training\nLinux Basics by Martin Hölzer, EEBG 2024\nIntroduction to UNIX command line\nWorkflow Manegment System by Martin Hölzer, EEBG 2024"
   },
   {
     "objectID": "resources.html#good-recommendations-to-start-with",
     "href": "resources.html#good-recommendations-to-start-with",
     "title": "Resourses",
     "section": "",
-    "text": "Genomics tools and resources - GitHub\nNCBI Tutorials and Webinars\nEMBL-EBI Training"
+    "text": "Genomics tools and resources - GitHub\nNCBI Tutorials and Webinars\nEMBL-EBI Training\nLinux Basics by Martin Hölzer, EEBG 2024\nIntroduction to UNIX command line\nWorkflow Manegment System by Martin Hölzer, EEBG 2024"
   },
   {
     "objectID": "resources.html#bioinformatics-courses",
@@ -425,5 +425,12 @@
     "title": "Resourses",
     "section": "Useful Links / Opportunities in Ukraine",
     "text": "Useful Links / Opportunities in Ukraine\n\nNGO Bioinformatics for Ukraine\nNGO GenomicsUA\nUBDS^3 Summer School\nCRABS Summer School\nUkraininan school in Evolutionary Biology\nOdesa Bio Summer School"
+  },
+  {
+    "objectID": "qmd/HW2_Sanger_SnapGene.html",
+    "href": "qmd/HW2_Sanger_SnapGene.html",
+    "title": "HW2_Sanger_SnapGene",
+    "section": "",
+    "text": "Знайомство зі SnapGene\n\nSnapGene - це програмне забезпечення для молекулярної біології. Воно пропонує швидкий і простий спосіб планування, візуалізації та документування ваших молекулярно-біологічних процедур\n\n\nОпис завдання\n\nЗавантажити SnapGene Viewer або встановити 30-денну trial версію SnapGene. Ознайомитись із можливостями програми\nЗнайти плазміду в репозиторії SnapGene (Приклад - Плазміда pCAG-GFP, у якій EGFP є кодуючою послідовністю).\n\n14 плазмід на вибір:\n\nEYFP\nECFP\npKillerOrange-B\npmCherry\npTagBFP-C\npmStrawberry\npmBanana\npZsGreen\npmKO1-S1\npLSSmOrange-C1\npDG1-S1\npmPlum\npDsRed-Express\npE2-Crimson\nphKikGR1-S1\npTimer-1\npRSET-CFP\npmMiCy1-S1\n\nЗнайти праймер для секвенування кодуючої послідовності і змінити назву праймера дописавши у кінці назви “_seq”. Якщо немає праймера, або ви його не знайшли, створіть власний за допомогою програми SnapGene. Якість праймеру для секвенування можете перевірити за допомогою онлайн-інструментів eurofinsgenomics або premierbiosoft або іншого онлайн ресурсу. Також можна скористатися готовим інструментом для дизайну праймеру sequencing-primer-design\n\n\nХід роботи\nПісля того як ви завантажили плазміду, вам потрібно знайти кодуючу послідовність - Ваш ген інтересу(Gene of interest - GOI). Тобто та ділянка ДНК, яку ви клонуєте або вже заклонована всередину плазміди. Для того щоб згадати будову плазміди скористайтесь довідниковою інформацією нижче:\n\n\n\n\n\n\nОсновні компонети плазміди:\n\n\n\n\n\n\nori (origin) сайт для реплікації плазміди всередині хосту\nГен резистентності до антибіотику для селекції бактеріальних клонів виключно з вашою цільовою плазмідою.\nMultiple Cloning Site (MCS) - короткий сегмент ДНК який містить групу рестрикційних сайтів призначених для клонування гену інтересу. Найчастіше MCS розташовують після(downstream) промоторної ділянки\nГен інтересу (Insert) - Ген, промотор, або інший фрагмент ДНК вклонований у multiple cloning site\nПромоторна ділянка (Promoter) - ділянка, що ініціює транскрипцію вашого гену інтересу. Життєво важливий компонент для експресуючих векторів: визначає, в яких типах клітин експресується ген та кількість отриманого рекомбінантного білка.\nСелективний маркер (Selectable Marker) - Ген стійкості до антибіотиків дозволяє проводити селекцію в бактеріях. Однак багато плазмід також мають маркери для селекції в інших типах клітин. Особливо важливий у експресуючих векторах еукаріот, якщо потрібно проводити відбір клонів по селективному маркеру.\nМісце посадки для праймера (Primer Binding Site) - Коротка одноланцюгова послідовність ДНК, що використовується як початкова точка для ПЛР-ампліфікації або секвенування. Праймери можна використовувати для верифікації послідовності плазмід.\n\nІлюстрація плазміди та її елементів: \n\n\n\nПісля того як вий знайшли ваш ген інтересу на плазміді, потрібно вияснити скільки праймерів потрібно дизайнити для того щоб повністю покрити всю довжину гену інтересу.\n\n\n\n\n\n\nДовжина ріду секвенування за Сенгером\n\n\n\nОрієнтовна довжина фрагментів секвенування складає 500-900 bp в залежності від вашого набору реактивів та секвенатора. У нашому сетапі ми орієнтуємось на довжину фрагменту 500-600 bp. Якщо ви не можете покрити довжину гену інтересу одним праймером, необхідно здизайнити другий праймер з іншої сторони(reverse primer). Зверніть увагу що довжина ріду секвенування за Сенгером залежить від полімеру який ви використовуєте та довжини капіляру (наприклад 50 або 80см). Чим більша довжина капіляру, тим більше фрагментів може краще розділитись в капілярі і відповідно більше фрагментів термінального ПЛР синтезу може зчитати пристрій. Для прикладу, який вигляд має капіляр для ABI3130xl можете знайти тут.\n\n\nЗверніть увагу, що праймер повинен дивитись у сторону вашої кодуючої послідовності, У SnapGene це відображається як фіолетова стрілка у відповідному напрямку, де початок стрілки вказує на напрямок синтезу:\n\n\n\nЗображення праймера у програмі SnapGene. M13fw - один з найпопулярніших праймерів для секвенування зі сімейства pUC плазмід\n\n\nПісля знаходження такого праймера необхідно дописати в кінці назви праймера “_seq” і зберегти файл у форматі “*.dna”. Результатом роботи є .dna файл із збереженим праймером для секвенування.\n\n\nКорисні посилання\n\nMolecular Biology Basics\nБудова Плазмід"
   }
 ]

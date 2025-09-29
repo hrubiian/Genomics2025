@@ -14,11 +14,11 @@ title: "Syllabus"
 
 ## Week 2 (30.09.2025)
 
--   Sanger Sequencing. Design of primers for Sanger Sequencing. SnapGene.
+-   Sanger Sequencing. Design of primers for Sanger Sequencing. [SnapGene](https://www.snapgene.com/snapgene-viewer)
 
--   HW: Designing primers for sequencing and visualization in SnapGene
+-   HW: Install SnapGene Viewer. Make [HW2_SnapGene task](/qmd/HW2_Sanger_SnapGene.qmd).
 
--   Presentation - Google Slides
+-   Presentation - [Google Slides](https://docs.google.com/presentation/d/15XIOrtm3CwoUuHgWN01H-UV6W7iY7-5fMgWqJO3IFn4/edit?usp=sharing)
 
 ## Week 3(07.10.2025)
 
@@ -38,29 +38,34 @@ title: "Syllabus"
 
 -   NGS analysis part 3. Variant calling. VCF files. Annotation of variants
 -   HW:
--   Presentation: 
+-   Presentation:
 
 ## Week 6(28.10.2025)
+
 -   Types of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants
 -   HW:
--   Presentation: 
+-   Presentation:
 
 ## Week 7(04.11.2025)
+
 -   Analysis of annotated VCF files.VEP.Fst.Tadjima's D.
 -   HW:
--   Presentation: 
+-   Presentation:
 
 ## Week 8(11.11.2025)
+
 -   Oxford Nanopore sequencing. Long reads. Applications.
 -   HW:
--   Presentation: 
+-   Presentation:
 
 ## Week 9(18.11.2025)
+
 -   R in genomics
 -   HW:
--   Presentation: 
+-   Presentation:
 
 ## Week 10(25.11.2025)
+
 -   Guest Lecture
 
 ## Week 11(02.12.2025)
