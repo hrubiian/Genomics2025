@@ -10,30 +10,31 @@ title: "Resourses"
 
 -   [EMBL-EBI Training](https://www.ebi.ac.uk/training/online/)
 
-- [Linux Basics by Martin Hölzer, EEBG 2024](https://docs.google.com/presentation/d/14xELo7lDbd-FYuy144ZDK1tV_ZBdBYun_COelrKYWps/edit?slide=id.p#slide=id.p)
-- [Introduction to UNIX command line](https://ngs-docs.github.io/2021-august-remote-computing/introduction-to-the-unix-command-line.html)
-- [Workflow Manegment System by Martin Hölzer, EEBG 2024](https://docs.google.com/presentation/d/1CgFtt7W3c4mlJ9Asd0cQA0L72dPEiGHhonAhxWoDwZA/edit?slide=id.p1#slide=id.p1)
+-   [Linux Basics by Martin Hölzer, EEBG 2024](https://docs.google.com/presentation/d/14xELo7lDbd-FYuy144ZDK1tV_ZBdBYun_COelrKYWps/edit?slide=id.p#slide=id.p)
+
+-   [Introduction to UNIX command line](https://ngs-docs.github.io/2021-august-remote-computing/introduction-to-the-unix-command-line.html)
+
+-   [Workflow Manegment System by Martin Hölzer, EEBG 2024](https://docs.google.com/presentation/d/1CgFtt7W3c4mlJ9Asd0cQA0L72dPEiGHhonAhxWoDwZA/edit?slide=id.p1#slide=id.p1)
 
 ## Bioinformatics courses
 
 -   [Introduction to computational biology by Mike Love](https://biodatascience.github.io/compbio/)
 -   [Applied Computational Genomics By Aaron Quilan](https://github.com/quinlan-lab/applied-computational-genomics#course-lecture-slides)
-- [Structural and Functional Genomics Course](https://drive.google.com/drive/folders/1SBncGk2tQ1PPmdaPAjz-NIovsROZKrKj)
+-   [Structural and Functional Genomics Course](https://drive.google.com/drive/folders/1SBncGk2tQ1PPmdaPAjz-NIovsROZKrKj)
 
 ## Books
 
 -   [Генетика Сиволоб](https://biomed.knu.ua/images/stories/Kafedry/Genetika/Biblioteka/Genetyka_site/Genetics_sivolob_et_al.pdf)
 -   [Молекулярна біологія Сиволоб 2023](https://drive.google.com/file/d/17B5vbVynpqq8co08fYty7iT3k0TSxMAv/view)
-- [Modern Statistics for Modern Biology](https://www.huber.embl.de/msmb/)
-
+-   [Modern Statistics for Modern Biology](https://www.huber.embl.de/msmb/)
 
 ## Research Articles
 
 ## Useful Links / Opportunities in Ukraine
 
-- [NGO Bioinformatics for Ukraine](https://bioinformaticsforukraine.com/)
-- [NGO GenomicsUA](https://genomics.org.ua/legal/)
-- [UBDS^3 Summer School](https://www.bds3.org/)
-- [CRABS Summer School](https://crabs.kse.ua/)
-- [Ukraininan school in Evolutionary Biology](https://biology.karazin.ua/useb-evolbiol.html)
-- [Odesa Bio Summer School](https://www.facebook.com/BioSummerSchoolONU/)
+-   [NGO Bioinformatics for Ukraine](https://bioinformaticsforukraine.com/)
+-   [NGO GenomicsUA](https://genomics.org.ua/legal/)
+-   [UBDS\^3 Summer School](https://www.bds3.org/)
+-   [CRABS Summer School](https://crabs.kse.ua/)
+-   [Ukraininan school in Evolutionary Biology](https://biology.karazin.ua/useb-evolbiol.html)
+-   [Odesa Bio Summer School](https://www.facebook.com/BioSummerSchoolONU/)

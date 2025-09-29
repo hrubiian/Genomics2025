@@ -1,6 +1,5 @@
 ---
 title: "HW2_Sanger_SnapGene"
-author: "Nazarii Hrubiian"
 ---
 
 # Знайомство зі [SnapGene](https://www.snapgene.com/)
