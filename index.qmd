@@ -7,3 +7,5 @@ Welcome to the **Structural and Functional Genomics** Fall 2025 practice course!
 -   [Syllabus](syllabus.qmd)
 
 -   [Resources](resources.qmd)
+
+Join link [here](https://meet.google.com/mzr-xckt-fru)
