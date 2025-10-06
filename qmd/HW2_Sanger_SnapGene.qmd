@@ -13,7 +13,7 @@ title: "HW2_Sanger_SnapGene"
 1.  Завантажити [SnapGene Viewer](https://www.snapgene.com/snapgene-viewer) або встановити [30-денну trial версію SnapGene](https://www.snapgene.com/free-trial). Ознайомитись із можливостями програми
 2.  Знайти плазміду в репозиторії [SnapGene](https://www.snapgene.com/plasmids) (Приклад - [Плазміда pCAG-GFP](https://www.addgene.org/11150/sequences/), у якій **EGFP** є кодуючою послідовністю).
 
-14 плазмід на вибір:
+18 плазмід на вибір:
 
 1.  [EYFP](https://www.snapgene.com/plasmids/fluorescent_protein_genes_and_plasmids/pEYFP)
 
