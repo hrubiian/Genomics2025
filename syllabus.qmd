@@ -20,7 +20,7 @@ title: "Syllabus"
 
 -   Presentation - [Google Slides](https://docs.google.com/presentation/d/15XIOrtm3CwoUuHgWN01H-UV6W7iY7-5fMgWqJO3IFn4/edit?usp=sharing)
 
-## Week 3(07.10.2025)
+## Week 3-4(07.10.2025-14.10.2025)
 
 -   NGS analysis part 1. Library preparation, sample quality assessment, QC of reads(fastQC/multiQC)
 
@@ -28,49 +28,46 @@ title: "Syllabus"
 
 -   Presentation: [Google Slides](https://docs.google.com/presentation/d/1jJhFPur4iUgZYTLSmxUQPAx0JiWnFpeco5uT-WJJAoE/edit?usp=sharing), [DNA Purification&QC](https://drive.google.com/file/d/12y7v0vlOY82tfc5DDYumEpEF4ELF2UI5/view?usp=sharing)
 
-## Week 4(14.10.2025)
+## Week 5(21.10.2025)
 
 -   NGS analysis part 2. Mapping reads to reference genome. SAM/BAM files. De novo assembly.
 -   Presentation: [Google Slides](https://docs.google.com/presentation/d/1DnwiXaZ2-g_ylStrPSO_FofjpP99LizGSNskZgrzQFo/edit?slide=id.p#slide=id.p)
 
-## Week 5(21.10.2025)
+## Week 6(28.10.2025)
 
 -   NGS analysis part 3. Variant calling. VCF files. Annotation of variants
 -   HW:
 -   Presentation:
 
-## Week 6(28.10.2025)
+## Week 7(04.11.2025)
 
 -   Types of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants
 -   HW:
 -   Presentation:
 
-## Week 7(04.11.2025)
+## Week 8(11.11.2025)
 
 -   Analysis of annotated VCF files.VEP.Fst.Tadjima's D.
 -   HW:
 -   Presentation:
 
-## Week 8(11.11.2025)
+## Week 9(18.11.2025)
 
 -   Oxford Nanopore sequencing. Long reads. Applications.
 -   HW:
 -   Presentation:
 
-## Week 9(18.11.2025)
+## Week 10(25.11.2025)
 
 -   R in genomics
 -   HW:
 -   Presentation:
 
-## Week 10(25.11.2025)
-
--   Guest Lecture
-
 ## Week 11(02.12.2025)
 
--   TBA
+-   Guest Lecture
 
 ## Week 12(09.12.2025)
 
 -   Presentation group's results. Summary of the course
+- Template of presentation - [Google Slides](https://docs.google.com/presentation/d/1y_OozXxONxVYAfu7k68_F-MTNjz7ekUS1Mb9qtOXUec/edit?slide=id.g311d8853ae9_0_32#slide=id.g311d8853ae9_0_32)

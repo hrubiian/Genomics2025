@@ -319,56 +319,56 @@
     "href": "syllabus.html#week-521.10.2025",
     "title": "Syllabus",
     "section": "Week 5(21.10.2025)",
-    "text": "Week 5(21.10.2025)\n\nNGS analysis part 3. Variant calling. VCF files. Annotation of variants\nHW:\nPresentation:"
+    "text": "Week 5(21.10.2025)\n\nNGS analysis part 2. Mapping reads to reference genome. SAM/BAM files. De novo assembly.\nPresentation: Google Slides"
   },
   {
     "objectID": "syllabus.html#week-1102.12.2025",
     "href": "syllabus.html#week-1102.12.2025",
     "title": "Syllabus",
     "section": "Week 11(02.12.2025)",
-    "text": "Week 11(02.12.2025)\n\nTBA"
+    "text": "Week 11(02.12.2025)\n\nGuest Lecture"
   },
   {
     "objectID": "syllabus.html#week-1209.12.2025",
     "href": "syllabus.html#week-1209.12.2025",
     "title": "Syllabus",
     "section": "Week 12(09.12.2025)",
-    "text": "Week 12(09.12.2025)\n\nPresentation group’s results. Summary of the course"
+    "text": "Week 12(09.12.2025)\n\nPresentation group’s results. Summary of the course\nTemplate of presentation - Google Slides"
   },
   {
     "objectID": "syllabus.html#week-628.10.2025",
     "href": "syllabus.html#week-628.10.2025",
     "title": "Syllabus",
     "section": "Week 6(28.10.2025)",
-    "text": "Week 6(28.10.2025)\n\nTypes of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants\nHW:\nPresentation:"
+    "text": "Week 6(28.10.2025)\n\nNGS analysis part 3. Variant calling. VCF files. Annotation of variants\nHW:\nPresentation:"
   },
   {
     "objectID": "syllabus.html#week-704.11.2025",
     "href": "syllabus.html#week-704.11.2025",
     "title": "Syllabus",
     "section": "Week 7(04.11.2025)",
-    "text": "Week 7(04.11.2025)\n\nAnalysis of annotated VCF files.VEP.Fst.Tadjima’s D.\nHW:\nPresentation:"
+    "text": "Week 7(04.11.2025)\n\nTypes of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants\nHW:\nPresentation:"
   },
   {
     "objectID": "syllabus.html#week-811.11.2025",
     "href": "syllabus.html#week-811.11.2025",
     "title": "Syllabus",
     "section": "Week 8(11.11.2025)",
-    "text": "Week 8(11.11.2025)\n\nOxford Nanopore sequencing. Long reads. Applications.\nHW:\nPresentation:"
+    "text": "Week 8(11.11.2025)\n\nAnalysis of annotated VCF files.VEP.Fst.Tadjima’s D.\nHW:\nPresentation:"
   },
   {
     "objectID": "syllabus.html#week-918.11.2025",
     "href": "syllabus.html#week-918.11.2025",
     "title": "Syllabus",
     "section": "Week 9(18.11.2025)",
-    "text": "Week 9(18.11.2025)\n\nR in genomics\nHW:\nPresentation:"
+    "text": "Week 9(18.11.2025)\n\nOxford Nanopore sequencing. Long reads. Applications.\nHW:\nPresentation:"
   },
   {
     "objectID": "syllabus.html#week-1025.11.2025",
     "href": "syllabus.html#week-1025.11.2025",
     "title": "Syllabus",
     "section": "Week 10(25.11.2025)",
-    "text": "Week 10(25.11.2025)\n\nGuest Lecture"
+    "text": "Week 10(25.11.2025)\n\nR in genomics\nHW:\nPresentation:"
   },
   {
     "objectID": "resources.html",
@@ -439,5 +439,12 @@
     "title": "HW3.Genome Assembly. Part 1",
     "section": "",
     "text": "Ціль\nМапування визначених ліній E.coli на референтний геном з NCBI. Оцінка якості відсеквенованих зразків та оцінка глибини покриття\n\n\nПайплайн\n\n\n\nОгляд пайплайну для аналізу STEC штамів E.coli\n\n\n\n\nSRA Accession List (одна лінія для кожної групи)\n\nDRX569192(DRR588645)\nDRX569193(DRR588646)\nDRX569194(DRR588647)\nDRX569195(DRR588648)\nDRX569197(DRR588650)\nDRX569196(DRR588649)\nDRX569198(DRR588651)\n\nЗ повним переліком SRA Accession List можна ознайомитись тут.\n\n\nКрок 1. Завантаження рідів з бази даних SRA\n# Створення папки для аналізу\nmkdir Ecoli_analysis\n\n# Відкрити папку з аналізом\ncd Ecoli_analysis\n#Створення середовища SRA\nconda create -n SRA\n# Активація середовища SRA\nconda activate SRA\n# Встановлення пакунку SRA-tools\nconda install sra-tools\n# створення папки data для зберігання даних секвенування\nmkdir data | cd data\n# Команда для завантаження FASTQ файлів у цільову папку data за допомогою інструменту fasterq-dump\nfasterq-dump DRR589139\n\n\nКрок 2. Обрізка адаптерів за допомогою fastp\n# Створення нового середовища qc і встановлення інструментів fastp fastqc multiqc:\nconda create --yes -n qc fastp fastqc multiqc\n# активувати середовище qc:\nconda activate qc\n# Перейти у попередню папку\ncd ..\n#створити папку trimmed:\nmkdir trimmed\n#Обрізка адаптерів за допомогою fastp:\nfastp --detect_adapter_for_pe --overrepresentation_analysis --correction --cut_right --thread 2 --html trimmed/DRR589139.fastp.html --json trimmed/DRR589139.fastp.json -i data/DRR589139_1.fastq -I data/DRR589139_2.fastq -o trimmed/DRR589139_1.fastq -O trimmed/DRR589139_2.fastq\n\n\nКрок 3. Перевірка якості обрізаних рідів\n# поверністься у папку Ecoli_analysis та створіть папку trimmed-fastqc\nmkdir trimmed-fastqc\n#Генерування репорту за допомогою інструменту FASTQC вашої лінії E.coli\nfastqc -o trimmed-fastqc data/DRR589139_1.fastq data/DRR589139_2.fastq\n#Run MultiQC\nmultiqc trimmed trimmed-fastqc\n\n\nКрок 4. Мапування на референтний геном\n# Створення папки для мапування\nmkdir mapping\ncd mapping\n# Завантаження референтного геному з ftp серверу NCBI\nmkdir reference\ncd reference\nwget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/005/845/GCF_000005845.2_ASM584v2/GCF_000005845.2_ASM584v2_genomic.fna.gz\n# Створити нове середовище mapping та інсталювати у ньому програми samtools, bwa, qualimap, r-base\nconda create --yes -n mapping samtools bwa qualimap r-base\n# Активувати нове середовище \nconda activate mapping\n# Розархівування даних в папці\ngunzip GCF_000005845.2_ASM584v2_genomic.fna.gz\n\n# Індексування\nbwa index GCF_000005845.2_ASM584v2_genomic.fna\n# Paired-end мапування проводиться в папці експерименту. У нашому випадку це папка data. Щоб перевірити шлях скористайтесь командою pwd щоб бути впевненим у правильному розташуванні перед запуском програми.\npwd\nbwa mem mapping/reference/GCF_000005845.2_ASM584v2_genomic.fna trimmed/DRR589139_1.fastq trimmed/DRR589139_2.fastq &gt; mapping/aln-DRR589139.sam\n\n\nПост-процессинг мапування\n# фіксування пар (mates) і стиснення файлів sam\nsamtools sort -n -O sam aln-DRR589139.sam | samtools fixmate -m -O bam - DRR589139.fixmate.bam\n# видалення sam файлу для економії простору\nrm aln-DRR589139.sam\n# Сортування bam файлу по координатам\nsamtools sort -O bam -o DRR589139.sorted.bam DRR589139.fixmate.bam\n# Видалення дуплікацій\nsamtools markdup -r -S DRR589139.sorted.bam DRR589139.sorted.dedup.bam\n# Видалення попереднього fixmate і sorted файлу \nrm DRR589139.fixmate.bam | rm DRR589139.sorted.bam\n# Статистика відфільтрованого bam фалу \nsamtools flagstat DRR589139.sorted.dedup.bam\n# Перевірка якості - оцінка глибини покриття зчитувань\nsamtools depth DRR589139.sorted.dedup.bam | gzip &gt; DRR589139.depth.txt.gz\n# Запуск qualimap для DRR589139.sorted.dedup.bam файлу\nqualimap bamqc -bam DRR589139.sorted.dedup.bam"
+  },
+  {
+    "objectID": "syllabus.html#week-3-407.10.2025-14.10.2025",
+    "href": "syllabus.html#week-3-407.10.2025-14.10.2025",
+    "title": "Syllabus",
+    "section": "Week 3-4(07.10.2025-14.10.2025)",
+    "text": "Week 3-4(07.10.2025-14.10.2025)\n\nNGS analysis part 1. Library preparation, sample quality assessment, QC of reads(fastQC/multiQC)\nHW: Ecoli_Genome_Assembly_Part_1\nPresentation: Google Slides, DNA Purification&QC"
   }
 ]
