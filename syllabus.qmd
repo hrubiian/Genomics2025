@@ -31,8 +31,7 @@ title: "Syllabus"
 ## Week 4(14.10.2025)
 
 -   NGS analysis part 2. Mapping reads to reference genome. SAM/BAM files. De novo assembly.
--   HW:
--   Presentation:
+-   Presentation: [Google Slides](https://docs.google.com/presentation/d/1DnwiXaZ2-g_ylStrPSO_FofjpP99LizGSNskZgrzQFo/edit?slide=id.p#slide=id.p)
 
 ## Week 5(21.10.2025)
 
