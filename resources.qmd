@@ -16,11 +16,23 @@ title: "Resourses"
 
 -   [Workflow Manegment System by Martin Hölzer, EEBG 2024](https://docs.google.com/presentation/d/1CgFtt7W3c4mlJ9Asd0cQA0L72dPEiGHhonAhxWoDwZA/edit?slide=id.p1#slide=id.p1)
 
+## Tools
+
+-   [samtools](https://www.htslib.org/)
+-   [bcftools](https://samtools.github.io/bcftools/)
+-   [fastp](https://github.com/OpenGene/fastp)
+-   [bwa](https://github.com/lh3/bwa)
+
+## Sequencing principles 
+
+- [Illumina Sequecning adapters](https://teichlab.github.io/scg_lib_structs/methods_html/Illumina.html)
+
 ## Bioinformatics courses
 
 -   [Introduction to computational biology by Mike Love](https://biodatascience.github.io/compbio/)
 -   [Applied Computational Genomics By Aaron Quilan](https://github.com/quinlan-lab/applied-computational-genomics#course-lecture-slides)
 -   [Structural and Functional Genomics Course](https://drive.google.com/drive/folders/1SBncGk2tQ1PPmdaPAjz-NIovsROZKrKj)
+-   [Speciation & Population Genomics: a how-to-guide](https://speciationgenomics.github.io/)
 
 ## Books
 

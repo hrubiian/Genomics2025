@@ -319,7 +319,7 @@
     "href": "syllabus.html#week-521.10.2025",
     "title": "Syllabus",
     "section": "Week 5(21.10.2025)",
-    "text": "Week 5(21.10.2025)\n\nNGS analysis part 2. Mapping reads to reference genome. SAM/BAM files. De novo assembly.\nPresentation: Google Slides"
+    "text": "Week 5(21.10.2025)\n\nNGS analysis part 2. Mapping reads to reference genome. SAM/BAM files. De novo assembly.\nPresentation: Google Slides\nTest1 ## Week 6(28.10.2025)\nNGS analysis part 3. Variant calling. VCF files. Annotation of variants\nHW:\nPresentation:"
   },
   {
     "objectID": "syllabus.html#week-1102.12.2025",
@@ -389,7 +389,7 @@
     "href": "resources.html#bioinformatics-courses",
     "title": "Resourses",
     "section": "Bioinformatics courses",
-    "text": "Bioinformatics courses\n\nIntroduction to computational biology by Mike Love\nApplied Computational Genomics By Aaron Quilan\nStructural and Functional Genomics Course"
+    "text": "Bioinformatics courses\n\nIntroduction to computational biology by Mike Love\nApplied Computational Genomics By Aaron Quilan\nStructural and Functional Genomics Course\nSpeciation & Population Genomics: a how-to-guide"
   },
   {
     "objectID": "resources.html#books",
@@ -446,5 +446,19 @@
     "title": "Syllabus",
     "section": "Week 3-4(07.10.2025-14.10.2025)",
     "text": "Week 3-4(07.10.2025-14.10.2025)\n\nNGS analysis part 1. Library preparation, sample quality assessment, QC of reads(fastQC/multiQC)\nHW: Ecoli_Genome_Assembly_Part_1\nPresentation: Google Slides, DNA Purification&QC"
+  },
+  {
+    "objectID": "resources.html#tools",
+    "href": "resources.html#tools",
+    "title": "Resourses",
+    "section": "Tools",
+    "text": "Tools\n\nsamtools\nbcftools\nfastp\nbwa"
+  },
+  {
+    "objectID": "resources.html#sequencing-principles",
+    "href": "resources.html#sequencing-principles",
+    "title": "Resourses",
+    "section": "Sequencing principles",
+    "text": "Sequencing principles\n\nIllumina Sequecning adapters"
   }
 ]
