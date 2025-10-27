@@ -37,8 +37,8 @@ title: "Syllabus"
 ## Week 6(28.10.2025)
 
 -   NGS analysis part 3. Variant calling. VCF files. Annotation of variants
--   HW:
--   Presentation:
+-   HW: [Ecoli_Genome_Assembly_Part_2](qmd/HW3.Genome_Assembly_Part_2_updated.qmd)
+-   Presentation: [Google Slides](https://docs.google.com/presentation/d/1NyhgarYwe4h0ba1X6RU2AU5lOMGAertPuj_E1kTjo5M/edit?usp=sharing)
 
 ## Week 7(04.11.2025)
 
