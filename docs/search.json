@@ -347,7 +347,7 @@
     "href": "syllabus.html#week-704.11.2025",
     "title": "Syllabus",
     "section": "Week 7(04.11.2025)",
-    "text": "Week 7(04.11.2025)\n\nTypes of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants\nHW:\nPresentation:"
+    "text": "Week 7(04.11.2025)\n\nAnalysis of annotated VCF files.VEP.Fst.Tadjima’s D.\nPresentation:Google Slides"
   },
   {
     "objectID": "syllabus.html#week-811.11.2025",
@@ -452,7 +452,7 @@
     "href": "resources.html#tools",
     "title": "Resourses",
     "section": "Tools",
-    "text": "Tools\n\nsamtools\nbcftools\nfastp\nbwa"
+    "text": "Tools\n\nsamtools\nbcftools\nfastp\nbwa\nvarious vcf tools\nIGV - Integrative Genomics Viewer\nSnpEff - genetic variant annotation and effect prediction tool"
   },
   {
     "objectID": "resources.html#sequencing-principles",
@@ -488,5 +488,19 @@
     "title": "HW3.Genome Assembly. Variant Calling",
     "section": "Побудова філогенетичного дерева",
     "text": "Побудова філогенетичного дерева\n\nЗнайдіть у створеному консенсусному геномі ген “filC” та спробуйте знайти найбільш споріднені геноми(штами) за допомогою інструменту “blastn”. Відповідну інформацію у вигляді скріншоту додайте до висновків вашої презентації\n(Optional Task)Також проведіть множинне вирівнювання та побудову філогенетичного дерева у програмі MEGA. Хто працює у WSL, то потрібно встановити на базі Windows. Отримані дерева додайте у презентацію. Пошук ліній для філогенетичного дерева можна здійснити також за допомогою інструменту BLAST шляхом завантаження найбільш відповідних ліній з різною спорідненістю. Список ліній E.coli можна також знайти у базі NCBI Taxonomy, також можна пошукати у базі Popset, Gene.\nОцінити розташування проаналізованої лінії серед інших ліній E.coli за допомогою інстументів Центру Геномної Епідеміології. Скористайтесь fastq файлами відовідними інструментами:\n\nMLST 2.0\nSerotypeFinder 2.0\nKmerFinder 3.2\n\n\nОтримані результати додайте до презентації та порівняйте з власноруч отриманими результатами де це релевантно."
+  },
+  {
+    "objectID": "resources.html#bioinformatics-courses-trainings",
+    "href": "resources.html#bioinformatics-courses-trainings",
+    "title": "Resourses",
+    "section": "Bioinformatics courses & Trainings",
+    "text": "Bioinformatics courses & Trainings\n\nIntroduction to computational biology by Mike Love\nApplied Computational Genomics By Aaron Quilan\nStructural and Functional Genomics Course\nSpeciation & Population Genomics: a how-to-guide\nБіоінформатика малих геномних варіантів (Youtube Genomics UA)"
+  },
+  {
+    "objectID": "syllabus.html#week-711.11.2025",
+    "href": "syllabus.html#week-711.11.2025",
+    "title": "Syllabus",
+    "section": "Week 7(11.11.2025)",
+    "text": "Week 7(11.11.2025)\n\nTypes of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants\nHW:\nPresentation:"
   }
 ]

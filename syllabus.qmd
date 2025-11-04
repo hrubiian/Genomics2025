@@ -42,13 +42,12 @@ title: "Syllabus"
 
 ## Week 7(04.11.2025)
 
--   Types of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants
--   HW:
--   Presentation:
-
-## Week 8(11.11.2025)
-
 -   Analysis of annotated VCF files.VEP.Fst.Tadjima's D.
+-   Presentation:[Google Slides](https://docs.google.com/presentation/d/17XSWzw3bsfNZbTr5naQzfR4gZ5vkgYA-aLiA7bdn10o/edit?slide=id.g29d89553eed_0_16#slide=id.g29d89553eed_0_16)
+
+## Week 7(11.11.2025)
+
+-   Types of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants
 -   HW:
 -   Presentation:
 

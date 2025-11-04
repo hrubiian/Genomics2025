@@ -22,25 +22,27 @@ title: "Resourses"
 -   [bcftools](https://samtools.github.io/bcftools/)
 -   [fastp](https://github.com/OpenGene/fastp)
 -   [bwa](https://github.com/lh3/bwa)
+-   [various vcf tools](https://knausb.github.io/vcfR_documentation/vcf_software.html)
+-   [IGV - Integrative Genomics Viewer](https://igv.org/)
+-   [SnpEff - genetic variant annotation and effect prediction tool](https://pcingola.github.io/SnpEff/)
 
-## Sequencing principles 
+## Sequencing principles
 
-- [Illumina Sequecning adapters](https://teichlab.github.io/scg_lib_structs/methods_html/Illumina.html)
+-   [Illumina Sequecning adapters](https://teichlab.github.io/scg_lib_structs/methods_html/Illumina.html)
 
-## Bioinformatics courses
+## Bioinformatics courses & Trainings
 
 -   [Introduction to computational biology by Mike Love](https://biodatascience.github.io/compbio/)
 -   [Applied Computational Genomics By Aaron Quilan](https://github.com/quinlan-lab/applied-computational-genomics#course-lecture-slides)
 -   [Structural and Functional Genomics Course](https://drive.google.com/drive/folders/1SBncGk2tQ1PPmdaPAjz-NIovsROZKrKj)
 -   [Speciation & Population Genomics: a how-to-guide](https://speciationgenomics.github.io/)
-
+ - [Біоінформатика малих геномних варіантів (Youtube Genomics UA)](https://www.youtube.com/watch?v=2x5XLqU_U-A)
+ 
 ## Books
 
 -   [Генетика Сиволоб](https://biomed.knu.ua/images/stories/Kafedry/Genetika/Biblioteka/Genetyka_site/Genetics_sivolob_et_al.pdf)
 -   [Молекулярна біологія Сиволоб 2023](https://drive.google.com/file/d/17B5vbVynpqq8co08fYty7iT3k0TSxMAv/view)
 -   [Modern Statistics for Modern Biology](https://www.huber.embl.de/msmb/)
-
-## Research Articles
 
 ## Useful Links / Opportunities in Ukraine
 
