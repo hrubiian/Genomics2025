@@ -48,8 +48,7 @@ title: "Syllabus"
 ## Week 7(11.11.2025)
 
 -   Types of Genetic Polymorphisms. SNPs, Indels, CNVs, Structural Variants
--   HW:
--   Presentation:
+-   Presentation: [Google Slides](https://docs.google.com/presentation/d/13M6hbFiviR-XhK61JRIr9q4udzad_1KpULmZk5LVKP8/edit?usp=sharing)
 
 ## Week 9(18.11.2025)
 
@@ -59,15 +58,9 @@ title: "Syllabus"
 
 ## Week 10(25.11.2025)
 
--   R in genomics
--   HW:
--   Presentation:
-
-## Week 11(02.12.2025)
-
 -   Guest Lecture
 
-## Week 12(09.12.2025)
+## Week 11(02.12.2025)
 
 -   Presentation group's results. Summary of the course
 - Template of presentation - [Google Slides](https://docs.google.com/presentation/d/1y_OozXxONxVYAfu7k68_F-MTNjz7ekUS1Mb9qtOXUec/edit?slide=id.g311d8853ae9_0_32#slide=id.g311d8853ae9_0_32)
