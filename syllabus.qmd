@@ -53,8 +53,7 @@ title: "Syllabus"
 ## Week 9(18.11.2025)
 
 -   Oxford Nanopore sequencing. Long reads. Applications.
--   HW:
--   Presentation:
+-   Presentation: [Google Slides](https://docs.google.com/presentation/d/1GFkwqwKna9uiec4MrmYDCI-2OhFh-fz6IK5io4MbEwY/edit?usp=sharing)
 
 ## Week 10(25.11.2025)
 
